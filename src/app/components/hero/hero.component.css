@@ -1,0 +1,115 @@
+/*
+    ==========================================
+    HERO - SECCIÓN PRINCIPAL
+    ==========================================
+
+    Este es el fondo de toda la sección Hero.
+
+    Usamos una variable que definimos en
+    src/styles.css para mantener los mismos
+    colores en toda la página.
+*/
+.hero {
+    background-color: var(--kakbe-mint);
+}
+
+
+/*
+    ==========================================
+    CONTENIDO DEL HERO
+    ==========================================
+
+    min-height:
+    Le damos una altura mínima equivalente al
+    75% de la altura visible de la pantalla.
+
+    IMPORTANTE:
+    Usamos min-height y no height porque así
+    el Hero puede crecer si necesita más espacio,
+    especialmente en celulares.
+*/
+.hero-content {
+    min-height: 75vh;
+}
+
+
+/*
+    ==========================================
+    TÍTULO PRINCIPAL
+    ==========================================
+
+    Este estilo afecta:
+
+    Tecnología,
+    comunidad y
+    oportunidades
+*/
+.hero-title {
+    color: var(--kakbe-dark);
+
+    /* Tamaño grande para destacar el mensaje principal */
+    font-size: 3.5rem;
+
+    /* Hace el título más grueso */
+    font-weight: 700;
+
+    /* Reduce un poco el espacio entre líneas */
+    line-height: 1.1;
+}
+
+
+/*
+    Solo afecta al <span> que contiene
+    la palabra "oportunidades".
+
+    Así podemos destacar una palabra sin
+    cambiar el color de todo el título.
+*/
+.hero-title span {
+    color: var(--kakbe-turquoise);
+}
+
+
+/*
+    ==========================================
+    DESCRIPCIÓN
+    ==========================================
+
+    max-width:
+    evita que el texto se extienda demasiado
+    horizontalmente y mejora su lectura.
+
+    line-height:
+    agrega espacio entre las líneas.
+*/
+.hero-description {
+    color: var(--kakbe-dark);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 520px;
+
+    /* Espacio arriba y abajo del párrafo */
+    margin: 1.5rem 0;
+}
+
+
+/*
+    ==========================================
+    IMAGEN DEL HERO
+    ==========================================
+
+    width:
+    tamaño ideal de la imagen.
+
+    max-width: 100%:
+    evita que la imagen se salga de su columna
+    cuando la pantalla es pequeña.
+
+    height: auto:
+    conserva las proporciones originales.
+*/
+.hero-image {
+    width: 420px;
+    max-width: 100%;
+    height: auto;
+}

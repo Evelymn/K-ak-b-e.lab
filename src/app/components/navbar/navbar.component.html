@@ -1,0 +1,203 @@
+<header>
+
+    <div class="container-fluid">
+
+        <nav class="navbar navbar-expand-lg navbar-white">
+
+            <div class="container-fluid">
+
+
+                <!--
+                    MARCA / LOGO
+
+                    Esta imagen está guardada en:
+                    src/assets/images/logo-kakbe.png
+                -->
+                <a class="navbar-brand" href="#">
+
+                    <img
+                        src="assets/images/logo-kakbe.png"
+                        alt="Logo de k'ak'b'e.lab"
+                        height="70"
+                    >
+                     <!--
+                    Nombre de la comunidad.
+
+                    Lo ponemos en un span porque después podremos
+                    modificar únicamente su diseño desde CSS.
+                -->
+                <!--
+    Separamos el nombre en dos partes para poder
+    darle un color diferente a cada una.
+
+    k’ak’b’e → morado
+    .lab     → turquesa
+-->
+                <span class="brand-name">
+                    <span class="brand-kakbe">k’ak’b’e</span><span class="brand-lab">.lab</span>
+                </span>
+
+                </a>
+
+
+                <!--
+                    BOTÓN HAMBURGUESA
+
+                    Bootstrap muestra este botón cuando
+                    la pantalla es pequeña.
+
+                    data-bs-target="#navbarSupportedContent"
+                    está conectado con el div que tiene:
+
+                    id="navbarSupportedContent"
+
+                    Gracias a eso puede abrir/cerrar el menú.
+                -->
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+
+                <!--
+                    CONTENIDO DEL MENÚ
+
+                    collapse navbar-collapse:
+                    permite que Bootstrap oculte este contenido
+                    en pantallas pequeñas y lo muestre cuando
+                    presionamos el botón hamburguesa.
+                -->
+                <div
+                    class="collapse navbar-collapse"
+                    id="navbarSupportedContent"
+                >
+                  <!--
+                      MENÚ DE NAVEGACIÓN
+
+                      navbar-nav:
+                      Clase de Bootstrap que organiza esta lista <ul>
+                      como un menú de navegación.
+
+                      ms-auto:
+                      Significa "margin-start: auto".
+                      Bootstrap coloca automáticamente todo el espacio disponible
+                      antes de este menú, haciendo que el menú se desplace hacia
+                      el lado derecho del Navbar.
+
+                      IMPORTANTE:
+                      - ms = margin start  → margen al inicio (izquierda)
+                      - me = margin end    → margen al final (derecha)
+                      - auto = Bootstrap calcula automáticamente ese espacio
+
+                      Por eso cambiar:
+
+                          me-auto  → deja el espacio después del menú
+
+                      por:
+
+                          ms-auto  → deja el espacio antes del menú
+
+                      hace que el menú pase de estar a la izquierda
+                      a quedar alineado hacia la derecha.
+
+                      mb-2:
+                      Agrega un pequeño margen inferior en pantallas pequeñas.
+
+                      mb-lg-0:
+                      A partir de pantallas grandes (lg), elimina ese margen inferior.
+                  -->
+                  <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-4">
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link"
+                                aria-current="page"
+                                href="#"
+                            >
+                                Inicio
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link"
+                                href="#"
+                            >
+                                Sobre nosotros
+                            </a>
+
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">
+                              Lo que hacemos
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">
+                              Únete
+                          </a>
+                      </li>
+                       <li class="nav-item">
+                          <a class="nav-link" href="#">
+                              Contacto
+                          </a>
+
+                      </li>
+                       <li class="nav-item">
+                          <a class="nav-link" href="#">
+                              Nombre
+                          </a>
+                      </li>
+
+                    </ul>
+
+
+                    <!--
+                        BUSCADOR
+
+                        Por ahora lo dejamos porque estás
+                        siguiendo el tutorial.
+
+                        Más adelante probablemente lo quitaremos
+                        y colocaremos aquí nuestro botón de Instagram.
+                    -->
+                    <!-- <form class="d-flex" role="search">
+
+                        <input
+                            class="form-control me-2"
+                            type="search"
+                            placeholder="Search"
+                            aria-label="Search"
+                        >
+
+                        <button
+                            class="btn btn-outline-success"
+                            type="submit"
+                        >
+                            Search
+                        </button>
+
+                    </form> -->
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>

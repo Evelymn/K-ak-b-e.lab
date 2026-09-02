@@ -1,0 +1,122 @@
+<!--
+    ==========================================
+    HERO - PRESENTACIÓN PRINCIPAL
+    ==========================================
+
+    Esta es la primera sección que verá el usuario
+    después del Navbar.
+
+    Tendremos dos columnas:
+
+    IZQUIERDA:
+    título, descripción y botones.
+
+    DERECHA:
+    imagen/logo representativo de la comunidad.
+-->
+<section class="hero">
+
+    <!--
+        container:
+        mantiene el contenido organizado y evita
+        que quede pegado a los bordes de la pantalla.
+    -->
+    <div class="container">
+
+        <!--
+            row:
+            crea una fila de Bootstrap.
+
+            align-items-center:
+            centra verticalmente las dos columnas.
+
+            min-vh-75 es una clase que crearemos nosotros
+            después para controlar la altura del Hero.
+        -->
+        <div class="row align-items-center hero-content">
+
+
+            <!--
+                COLUMNA IZQUIERDA
+
+                col-lg-6:
+                en pantallas grandes ocupa 6 de las
+                12 columnas de Bootstrap = 50%.
+
+                En celulares ocupará automáticamente
+                todo el ancho.
+            -->
+            <div class="col-lg-6">
+
+                <h1 class="hero-title">
+                    Tecnología,
+                    <br>
+                    comunidad y
+                    <br>
+                    <span>oportunidades</span>
+                </h1>
+
+
+                <p class="hero-description">
+                    Somos una comunidad de estudiantes de la UVG
+                    que impulsa a niñas y jóvenes a descubrir,
+                    aprender y crear con tecnología.
+                </p>
+
+
+                <!--
+                    d-flex:
+                    coloca los botones uno junto al otro.
+
+                    gap-3:
+                    agrega separación entre ellos.
+
+                    flex-wrap:
+                    permite que se acomoden si la pantalla
+                    se vuelve demasiado pequeña.
+                -->
+                <div class="d-flex gap-3 flex-wrap">
+
+                    <a
+                        href="#nosotras"
+                        class="btn btn-primary"
+                    >
+                        Conócenos
+                    </a>
+
+                    <a
+                        href="#contacto"
+                        class="btn btn-outline-primary"
+                    >
+                        Únete
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!--
+                COLUMNA DERECHA
+
+                También ocupa la mitad en pantallas grandes.
+
+                text-center:
+                centra horizontalmente la imagen.
+            -->
+            <div class="col-lg-6 text-center">
+
+                <img
+                    src="assets/images/logo-kakbe.png"
+                    alt="Logo de k'ak'b'e.lab"
+                    class="hero-image"
+                >
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>

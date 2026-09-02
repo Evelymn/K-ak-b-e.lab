@@ -1,0 +1,71 @@
+/*
+    Configuración general del nombre.
+
+    font-size:
+    controla el tamaño de todo el nombre.
+
+    font-weight:
+    hace que tenga el grosor similar al logo.
+
+    white-space:
+    evita que k’ak’b’e.lab se divida en dos líneas.
+*/
+.brand-name {
+    font-size: 1.70rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+
+/*
+    Primera parte del nombre:
+    k’ak’b’e
+
+    Utilizamos el morado del logo.
+*/
+.brand-kakbe {
+    color: var(--kakbe-dark);
+
+}
+
+
+/*
+    Segunda parte:
+    .lab
+
+    Utilizamos el turquesa del logo.
+*/
+.brand-lab {
+    color: #00a6a6;
+
+}
+
+header{
+  background-color: #FFFFFF;
+}
+
+
+/*
+    ==========================================
+    LINKS DEL NAVBAR
+    ==========================================
+
+    .nav-link selecciona los enlaces del menú,
+    por ejemplo:
+
+    Home
+    Link
+    Sobre nosotras
+    Contacto
+
+    color:
+    cambia el color del texto.
+
+    font-weight:
+    controla qué tan gruesa se ve la letra.
+*/
+.nav-link {
+    color: #294B52;
+    font-weight: 600
+    ;
+}

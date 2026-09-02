@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+/*
+    ==========================================
+    PALETA DE COLORES - K'AK'B'E.LAB
+    ==========================================
+
+    Guardamos aquí los colores principales de
+    nuestra identidad visual.
+
+    Al usar variables, si después queremos cambiar
+    un color, solamente tenemos que modificarlo aquí
+    y no buscarlo por toda la página.
+*/
+
+:root {
+
+    /* Color principal:
+       tecnología, frescura y energía. */
+    --kakbe-turquoise: #16C7C7;
+
+    /* Creatividad y personalidad de la comunidad. */
+    --kakbe-purple: #7657D5;
+
+    /* Crecimiento, juventud y oportunidades. */
+    --kakbe-green: #35D66F;
+
+    /* Confianza y profesionalismo.
+       También será nuestro texto oscuro principal. */
+    --kakbe-dark: #294B52;
+
+
+    /* ---------- FONDOS SUAVES ---------- */
+
+    /* Fondo tranquilo y fresco. */
+    --kakbe-mint: #E8FAF5;
+
+    /* Fondo creativo y acogedor. */
+    --kakbe-lavender: #F1EDFF;
+
+    /* Fondo cálido para evitar usar blanco
+       en absolutamente todas las secciones. */
+    --kakbe-cream: #FFF9F2;
+
+    /* Blanco para tarjetas y zonas que necesiten
+       más limpieza visual. */
+    --kakbe-white: #FFFFFF;
+}
