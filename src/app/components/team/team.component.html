@@ -1,106 +1,95 @@
 <!--
-    ==========================================
-    NUESTRO EQUIPO
-    ==========================================
+    SECCIÓN NUESTRO EQUIPO
 
-    Esta sección presenta a las integrantes
-    que forman k’ak’b’e.lab.
+    id="equipo":
+    identifica esta sección dentro de la página.
+
+    Gracias a este ID podemos crear un enlace
+    en el Navbar con:
+
+    href="#equipo"
+
+    Cuando el usuario haga clic en ese enlace,
+    el navegador buscará esta sección y bajará
+    automáticamente hasta ella.
 -->
 <section class="team" id="equipo">
 
-    <div class="container">
+<!--
+    FILA QUE CONTIENE A TODAS LAS INTEGRANTES
 
+    row:
+    crea una fila utilizando el sistema Grid de Bootstrap.
+
+    g-4:
+    agrega separación entre las tarjetas.
+
+    justify-content-center:
+    centra las tarjetas.
+    Esto será especialmente útil en la segunda fila,
+    donde solamente tendremos dos integrantes.
+-->
+<div class="row g-4 mt-5 justify-content-center">
+
+    @for (integrante of integrantes; track integrante.nombre) {
 
         <!--
-            ENCABEZADO
+            COLUMNA DE CADA INTEGRANTE
 
-            Aquí explicamos brevemente quiénes
-            forman parte de la comunidad.
+            col-12:
+            en celular ocupa todo el ancho.
+
+            col-md-6:
+            en tablet caben 2 integrantes por fila.
+
+            col-lg-4:
+            en computadora caben 3 por fila.
+
+            IMPORTANTE:
+            La tarjeta debe estar DENTRO de esta columna.
         -->
-        <div class="team-intro text-center mx-auto">
+        <div class="col-12 col-md-6 col-lg-4">
 
-            <span class="team-label">
-                NUESTRO EQUIPO
-            </span>
+            <article class="team-card">
 
-            <h2 class="team-title">
-                Las personas detrás de
-                <span>k’ak’b’e.lab</span>
-            </h2>
-
-            <p class="team-description">
-                Somos cinco estudiantes de la Universidad
-                del Valle de Guatemala unidas por el interés
-                de compartir tecnología, conocimiento
-                y nuevas oportunidades.
-            </p>
-
-        </div>
 
                 <!--
-            ==========================================
-            LISTA DE INTEGRANTES
-            ==========================================
-
-            @for permite recorrer el arreglo "integrantes"
-            que creamos en team.component.ts.
-
-            En cada vuelta:
-
-            integrante
-
-            representa a UNA de las integrantes.
-        -->
-        <div class="row g-4 mt-5 justify-content-center">
-
-            @for (integrante of integrantes; track integrante.nombre) {
-
-                <!--
-                    col-md-6:
-                    en pantallas medianas tendremos
-                    hasta dos tarjetas por fila.
-
-                    col-lg-4:
-                    en pantallas grandes cada tarjeta
-                    ocupa 4 de las 12 columnas.
-
-                    Eso permite aproximadamente
-                    tres tarjetas por fila.
+                    CONTENEDOR CUADRADO DE LA FOTO
                 -->
-                <div class="col-md-6 col-lg-4">
+                <div class="team-photo-container">
 
-                    <article class="team-card">
-
-
-                        <!-- Fotografía de la integrante -->
-                        <img
-                            [src]="integrante.imagen"
-                            [alt]="'Fotografía de ' + integrante.nombre"
-                            class="team-photo"
-                        >
-
-
-                        <!-- Nombre -->
-                        <h3>
-                            {{ integrante.nombre }}
-                        </h3>
-
-
-                        <!-- Rol dentro de la comunidad -->
-                        <p class="team-role">
-                            {{ integrante.rol }}
-                        </p>
-
-
-                    </article>
+                    <img
+                        [src]="integrante.imagen"
+                        [alt]="'Fotografía de ' + integrante.nombre"
+                        class="team-photo"
+                    >
 
                 </div>
 
-            }
+
+                <!--
+                    INFORMACIÓN DE LA INTEGRANTE
+                -->
+                <div class="team-info">
+
+                    <h3 class="team-name">
+                        {{ integrante.nombre }}
+                    </h3>
+
+                    <p class="team-role">
+                        {{ integrante.rol }}
+                    </p>
+
+                    <p class="team-career">
+                        Universidad del Valle de Guatemala
+                    </p>
+
+                </div>
+
+            </article>
 
         </div>
 
+    }
 
-    </div>
-
-</section>
+</div>

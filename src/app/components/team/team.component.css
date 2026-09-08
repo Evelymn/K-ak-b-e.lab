@@ -1,0 +1,399 @@
+/*
+    ==========================================
+    SECCIÓN NUESTRO EQUIPO
+    ==========================================
+
+    Esta clase controla toda la sección donde
+    mostramos a las integrantes de k’ak’b’e.lab.
+
+    padding:
+    agrega espacio arriba y abajo para que la
+    sección no quede apretada contra las demás.
+*/
+.team {
+    background-color: var(--kakbe-white);
+    padding: 6rem 0;
+}
+
+
+/*
+    ==========================================
+    INTRODUCCIÓN DEL EQUIPO
+    ==========================================
+
+    Este es el bloque que contiene:
+
+    NUESTRO EQUIPO
+    Conoce al equipo que impulsa k’ak’b’e.lab
+    Descripción...
+
+    max-width:
+    evita que el texto ocupe todo el ancho de
+    una pantalla grande.
+
+    margin:
+    mantiene el bloque centrado.
+*/
+.team-intro {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+/*
+    ==========================================
+    TEXTO PEQUEÑO "NUESTRO EQUIPO"
+    ==========================================
+
+    Lo usamos como una pequeña etiqueta antes
+    del título principal.
+*/
+.team-label {
+    color: var(--kakbe-turquoise);
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    /*
+        Separa ligeramente las letras para darle
+        apariencia de encabezado.
+    */
+    letter-spacing: 0.15rem;
+}
+
+
+/*
+    ==========================================
+    TÍTULO PRINCIPAL
+    ==========================================
+
+    Ejemplo:
+
+    Conoce al equipo que impulsa k’ak’b’e.lab
+*/
+.team-title {
+    color: var(--kakbe-dark);
+
+    font-size: 2.5rem;
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    /*
+        Espacio entre la etiqueta, el título
+        y la descripción.
+    */
+    margin: 0.8rem 0 1rem;
+}
+
+
+/*
+    Si dentro del título utilizamos un <span>,
+    podemos destacar esa parte con el violeta
+    de nuestra identidad.
+
+    Ejemplo:
+
+    Conoce al equipo que impulsa
+    <span>k’ak’b’e.lab</span>
+*/
+.team-title span {
+    color: var(--kakbe-purple);
+}
+
+
+/*
+    ==========================================
+    DESCRIPCIÓN DEL EQUIPO
+    ==========================================
+
+    line-height:
+    aumenta el espacio entre las líneas y hace
+    que el párrafo sea más cómodo de leer.
+*/
+.team-description {
+    color: var(--kakbe-dark);
+
+    font-size: 1.05rem;
+    line-height: 1.7;
+
+    margin-bottom: 0;
+}
+
+
+/*
+    ==========================================
+    TARJETA DE CADA INTEGRANTE
+    ==========================================
+
+    Cada integrante tendrá una tarjeta completa:
+
+    ┌───────────────────┐
+    │                   │
+    │       FOTO        │
+    │     CUADRADA      │
+    │                   │
+    ├───────────────────┤
+    │ Nombre            │
+    │ Rol               │
+    │ Universidad       │
+    └───────────────────┘
+
+    background-color:
+    coloca fondo blanco.
+
+    border:
+    agrega un borde muy suave.
+
+    border-radius:
+    redondea ligeramente las esquinas.
+
+    overflow: hidden:
+    evita que la fotografía sobresalga de
+    las esquinas de la tarjeta.
+
+    height: 100%:
+    ayuda a que las tarjetas tengan una
+    altura uniforme.
+*/
+.team-card {
+    background-color: var(--kakbe-white);
+    border: 1px solid rgba(41, 75, 82, 0.10);
+    border-radius: 0%;
+    overflow: hidden;
+    height: 100%;
+
+    /*
+        Evita que la tarjeta se vuelva excesivamente ancha
+        en monitores grandes.
+    */
+    max-width: 300px;
+
+    /*
+        Centra la tarjeta dentro de la columna Bootstrap.
+    */
+    margin: 0 auto;
+
+    box-shadow: 0 8px 25px rgba(41, 75, 82, 0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/*
+    ==========================================
+    EFECTO AL PASAR EL MOUSE
+    ==========================================
+
+    :hover significa:
+    "cuando el usuario coloca el mouse encima".
+
+    translateY(-5px):
+    mueve ligeramente la tarjeta hacia arriba.
+
+    Esto agrega interacción sin exagerar
+    la animación.
+*/
+.team-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 12px 30px rgba(41, 75, 82, 0.12);
+}
+
+
+/*
+    ==========================================
+    CONTENEDOR DE LA FOTOGRAFÍA
+    ==========================================
+
+    Esta parte es MUY importante.
+
+    aspect-ratio: 1 / 1:
+    obliga al espacio de la fotografía a ser
+    completamente cuadrado.
+
+    Ejemplo:
+
+    300px × 300px
+    400px × 400px
+
+    overflow: hidden:
+    oculta cualquier parte de la imagen que
+    sobresalga del cuadrado.
+*/
+.team-photo-container {
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    overflow: hidden;
+
+    /*
+        Fondo provisional por si alguna imagen
+        tarda en cargar.
+    */
+    background-color: var(--kakbe-mint);
+}
+
+
+/*
+    ==========================================
+    FOTOGRAFÍA
+    ==========================================
+
+    width y height:
+    hacen que la fotografía ocupe completamente
+    el cuadrado anterior.
+
+    object-fit: cover:
+    recorta automáticamente la imagen para llenar
+    el espacio SIN deformar a la persona.
+
+    Esto es muy útil porque las cinco fotografías
+    pueden tener tamaños diferentes.
+*/
+.team-photo {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    /*
+        object-position: center:
+        intenta mantener el centro de la fotografía
+        visible cuando necesita recortarla.
+    */
+    object-position: center;
+}
+
+
+/*
+    ==========================================
+    INFORMACIÓN DE LA INTEGRANTE
+    ==========================================
+
+    Esta zona está debajo de la fotografía.
+
+    padding:
+    agrega espacio interno para que el texto
+    no quede pegado a los bordes.
+*/
+.team-info {
+    padding: 1.4rem 1.5rem 1.6rem;
+}
+
+
+/*
+    ==========================================
+    NOMBRE
+    ==========================================
+
+    Es la información más importante después
+    de la fotografía, por eso tiene mayor tamaño
+    y grosor.
+*/
+.team-name {
+    color: var(--kakbe-dark);
+
+    font-size: 1.3rem;
+    font-weight: 700;
+
+    margin-bottom: 0.35rem;
+}
+
+
+/*
+    ==========================================
+    ROL DENTRO DE K’AK’B’E.LAB
+    ==========================================
+
+    Utilizamos violeta para diferenciar el rol
+    del resto de información.
+
+    Ejemplos:
+
+    Coordinación general
+    Comunicación
+    Talleres
+    Tecnología
+*/
+.team-role {
+    color: var(--kakbe-purple);
+
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    margin-bottom: 1rem;
+}
+
+
+/*
+    ==========================================
+    INFORMACIÓN ACADÉMICA
+    ==========================================
+
+    Esta información es secundaria.
+
+    Por eso usamos:
+    - tamaño más pequeño
+    - menor intensidad visual
+
+    Aquí posteriormente podríamos poner:
+
+    Ingeniería en ...
+    Universidad del Valle de Guatemala
+*/
+.team-career {
+    color: var(--kakbe-dark);
+
+    font-size: 0.85rem;
+
+    /*
+        opacity reduce un poco la intensidad
+        del color.
+    */
+    opacity: 0.7;
+
+    margin-bottom: 0;
+}
+
+
+/*
+    ==========================================
+    RESPONSIVE - CELULARES
+    ==========================================
+
+    Cuando la pantalla mide 767px o menos,
+    reducimos algunos tamaños para que la sección
+    se adapte mejor al teléfono.
+*/
+@media (max-width: 767px) {
+
+    /*
+        Reducimos el espacio vertical de
+        toda la sección.
+    */
+    .team {
+        padding: 4rem 0;
+    }
+
+
+    /*
+        El título será un poco más pequeño
+        para que no ocupe demasiadas líneas.
+    */
+    .team-title {
+        font-size: 2rem;
+    }
+
+
+    /*
+        Agregamos un poco de espacio lateral
+        al texto introductorio.
+    */
+    .team-intro {
+        padding: 0 1rem;
+    }
+}

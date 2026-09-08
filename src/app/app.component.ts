@@ -11,7 +11,17 @@ import { AboutComponent } from './components/about/about.component';
 // Importamos TeamComponent para poder mostrar
 // la sección de integrantes de k’ak’b’e.lab.
 import { TeamComponent } from './components/team/team.component';
-
+// Importamos PurposeComponent.
+//
+// Este componente mostrará el propósito de k’ak’b’e.lab:
+// por qué nace la comunidad y qué busca construir.
+import { PurposeComponent } from './components/purpose/purpose.component';
+// Importamos CollaborationComponent.
+//
+// Esta sección mostrará las diferentes formas
+// en que empresas, profesionales e instituciones
+// pueden colaborar con k’ak’b’e.lab.
+import { CollaborationComponent } from './components/collaboration/collaboration.component';
 @Component({
   selector: 'app-root',
 
@@ -30,8 +40,9 @@ import { TeamComponent } from './components/team/team.component';
     NavbarComponent,
     HeroComponent,
     AboutComponent,
-    TeamComponent
-    // ActivitiesComponent
+    TeamComponent,
+    PurposeComponent,
+    CollaborationComponent
 ],
 
 

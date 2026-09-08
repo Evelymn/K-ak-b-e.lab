@@ -1,0 +1,272 @@
+/*
+    ==========================================
+    SECCIÓN: NUESTRO PROPÓSITO
+    ==========================================
+
+    Esta clase controla toda la sección.
+
+    Usamos lavanda suave para diferenciarla
+    visualmente de las secciones anteriores
+    sin utilizar un color demasiado fuerte.
+
+    padding:
+    agrega espacio arriba y abajo.
+*/
+.purpose {
+    background-color: var(--kakbe-lavender);
+    padding: 6rem 0;
+}
+
+
+/*
+    ==========================================
+    INTRODUCCIÓN
+    ==========================================
+
+    max-width:
+    limita el ancho del texto para evitar
+    líneas demasiado largas.
+
+    margin: 0 auto:
+    centra horizontalmente el bloque.
+*/
+.purpose-intro {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+/*
+    ==========================================
+    ETIQUETA "NUESTRO PROPÓSITO"
+    ==========================================
+
+    Es el pequeño texto que aparece antes
+    del título principal.
+
+    letter-spacing:
+    separa ligeramente las letras y le da
+    una apariencia más de encabezado.
+*/
+.purpose-label {
+    color: var(--kakbe-turquoise);
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    letter-spacing: 0.15rem;
+}
+
+
+/*
+    ==========================================
+    TÍTULO PRINCIPAL
+    ==========================================
+
+    Ejemplo:
+
+    Tecnología que abre caminos.
+*/
+.purpose-title {
+    color: var(--kakbe-dark);
+
+    font-size: 2.8rem;
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    margin: 0.8rem 0 1.5rem;
+}
+
+
+/*
+    En nuestro HTML tenemos:
+
+    Tecnología que
+    <span>abre caminos.</span>
+
+    Este selector permite darle otro color
+    solamente a esa parte del título.
+*/
+.purpose-title span {
+    color: var(--kakbe-purple);
+}
+
+
+/*
+    ==========================================
+    DESCRIPCIÓN PRINCIPAL
+    ==========================================
+
+    line-height:
+    aumenta el espacio entre líneas para que
+    los párrafos sean más cómodos de leer.
+*/
+.purpose-description {
+    color: var(--kakbe-dark);
+
+    font-size: 1.05rem;
+    line-height: 1.8;
+
+    margin-bottom: 0.8rem;
+}
+
+
+/*
+    ==========================================
+    CADA PILAR DEL PROPÓSITO
+    ==========================================
+
+    Aquí están:
+
+    01 Acercar
+    02 Acompañar
+    03 Conectar
+
+    IMPORTANTE:
+    No les ponemos una tarjeta blanca completa.
+
+    Queremos que esta sección tenga una apariencia
+    más abierta y diferente a Team.
+*/
+.purpose-item {
+    position: relative;
+
+    padding: 2rem 1.5rem;
+
+    /*
+        Esta línea superior funciona como
+        un pequeño detalle tecnológico.
+    */
+    border-top: 2px solid var(--kakbe-turquoise);
+
+    height: 100%;
+}
+
+
+/*
+    ==========================================
+    NÚMEROS 01 / 02 / 03
+    ==========================================
+
+    Los números sirven como elemento visual
+    y también ayudan a diferenciar cada idea.
+*/
+.purpose-number {
+    display: block;
+
+    color: var(--kakbe-turquoise);
+
+    font-size: 2.5rem;
+    font-weight: 700;
+
+    /*
+        Reducimos un poco la intensidad para que
+        el número acompañe al título sin dominarlo.
+    */
+    opacity: 0.65;
+
+    margin-bottom: 1rem;
+}
+
+
+/*
+    ==========================================
+    TÍTULOS DE LOS PILARES
+    ==========================================
+
+    Acercar
+    Acompañar
+    Conectar
+*/
+.purpose-item h3 {
+    color: var(--kakbe-dark);
+
+    font-size: 1.35rem;
+    font-weight: 700;
+
+    margin-bottom: 0.8rem;
+}
+
+
+/*
+    ==========================================
+    TEXTO DE LOS PILARES
+    ==========================================
+*/
+.purpose-item p {
+    color: var(--kakbe-dark);
+
+    font-size: 1rem;
+    line-height: 1.7;
+
+    margin-bottom: 0;
+}
+
+
+/*
+    ==========================================
+    INTERACCIÓN CON EL MOUSE
+    ==========================================
+
+    Cuando colocamos el mouse encima de uno
+    de los pilares, cambiamos la línea superior.
+
+    Esto agrega interacción sin utilizar
+    una animación exagerada.
+*/
+.purpose-item {
+    transition: border-color 0.3s ease;
+}
+
+
+.purpose-item:hover {
+    border-top-color: var(--kakbe-purple);
+}
+
+
+/*
+    ==========================================
+    RESPONSIVE - CELULARES
+    ==========================================
+
+    Esta regla se aplica únicamente cuando
+    la pantalla mide 767px o menos.
+*/
+@media (max-width: 767px) {
+
+    /*
+        Reducimos un poco el espacio vertical
+        porque en celular la pantalla es menor.
+    */
+    .purpose {
+        padding: 4rem 0;
+    }
+
+
+    /*
+        Reducimos el tamaño del título para
+        evitar que ocupe demasiadas líneas.
+    */
+    .purpose-title {
+        font-size: 2.1rem;
+    }
+
+
+    /*
+        Damos espacio lateral a la introducción
+        para que el texto no toque los bordes.
+    */
+    .purpose-intro {
+        padding: 0 1rem;
+    }
+
+
+    /*
+        Los números no necesitan ser tan grandes
+        en una pantalla pequeña.
+    */
+    .purpose-number {
+        font-size: 2rem;
+    }
+}
