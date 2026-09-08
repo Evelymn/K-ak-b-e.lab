@@ -45,3 +45,12 @@
        más limpieza visual. */
     --kakbe-white: #FFFFFF;
 }
+/*
+    Hace que la navegación entre secciones
+    mediante enlaces como #nosotras o #contacto
+    se desplace suavemente en lugar de saltar
+    instantáneamente.
+*/
+html {
+    scroll-behavior: smooth;
+}

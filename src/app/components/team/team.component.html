@@ -1,0 +1,106 @@
+<!--
+    ==========================================
+    NUESTRO EQUIPO
+    ==========================================
+
+    Esta sección presenta a las integrantes
+    que forman k’ak’b’e.lab.
+-->
+<section class="team" id="equipo">
+
+    <div class="container">
+
+
+        <!--
+            ENCABEZADO
+
+            Aquí explicamos brevemente quiénes
+            forman parte de la comunidad.
+        -->
+        <div class="team-intro text-center mx-auto">
+
+            <span class="team-label">
+                NUESTRO EQUIPO
+            </span>
+
+            <h2 class="team-title">
+                Las personas detrás de
+                <span>k’ak’b’e.lab</span>
+            </h2>
+
+            <p class="team-description">
+                Somos cinco estudiantes de la Universidad
+                del Valle de Guatemala unidas por el interés
+                de compartir tecnología, conocimiento
+                y nuevas oportunidades.
+            </p>
+
+        </div>
+
+                <!--
+            ==========================================
+            LISTA DE INTEGRANTES
+            ==========================================
+
+            @for permite recorrer el arreglo "integrantes"
+            que creamos en team.component.ts.
+
+            En cada vuelta:
+
+            integrante
+
+            representa a UNA de las integrantes.
+        -->
+        <div class="row g-4 mt-5 justify-content-center">
+
+            @for (integrante of integrantes; track integrante.nombre) {
+
+                <!--
+                    col-md-6:
+                    en pantallas medianas tendremos
+                    hasta dos tarjetas por fila.
+
+                    col-lg-4:
+                    en pantallas grandes cada tarjeta
+                    ocupa 4 de las 12 columnas.
+
+                    Eso permite aproximadamente
+                    tres tarjetas por fila.
+                -->
+                <div class="col-md-6 col-lg-4">
+
+                    <article class="team-card">
+
+
+                        <!-- Fotografía de la integrante -->
+                        <img
+                            [src]="integrante.imagen"
+                            [alt]="'Fotografía de ' + integrante.nombre"
+                            class="team-photo"
+                        >
+
+
+                        <!-- Nombre -->
+                        <h3>
+                            {{ integrante.nombre }}
+                        </h3>
+
+
+                        <!-- Rol dentro de la comunidad -->
+                        <p class="team-role">
+                            {{ integrante.rol }}
+                        </p>
+
+
+                    </article>
+
+                </div>
+
+            }
+
+        </div>
+
+
+    </div>
+
+</section>

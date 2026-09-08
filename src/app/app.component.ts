@@ -6,7 +6,11 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 // Importamos HeroComponent para poder mostrar
 // la sección principal de presentación.
 import { HeroComponent } from './components/hero/hero.component';
+import { AboutComponent } from './components/about/about.component';
 
+// Importamos TeamComponent para poder mostrar
+// la sección de integrantes de k’ak’b’e.lab.
+import { TeamComponent } from './components/team/team.component';
 
 @Component({
   selector: 'app-root',
@@ -22,9 +26,12 @@ import { HeroComponent } from './components/hero/hero.component';
   // <app-navbar></app-navbar>
   //
   // agregamos NavbarComponent.
-  imports: [
+ imports: [
     NavbarComponent,
-    HeroComponent
+    HeroComponent,
+    AboutComponent,
+    TeamComponent
+    // ActivitiesComponent
 ],
 
 

@@ -1,0 +1,171 @@
+/*
+    ==========================================
+    SECCIÓN SOBRE NOSOTRAS
+    ==========================================
+
+    Usamos un fondo crema muy suave para diferenciar
+    esta sección del Hero, que utiliza fondo menta.
+
+    Así evitamos que toda la página sea blanca,
+    pero mantenemos una apariencia limpia y cómoda.
+*/
+.about {
+    background-color: var(--kakbe-cream);
+
+    /* Espacio arriba y abajo de toda la sección */
+    padding: 5rem 0;
+}
+
+
+/*
+    ==========================================
+    IMAGEN
+    ==========================================
+
+    Creamos un espacio visual para la imagen.
+
+    display: flex:
+    nos permite centrar fácilmente la imagen.
+
+    justify-content:
+    centra horizontalmente.
+
+    align-items:
+    centra verticalmente.
+*/
+.about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*
+    Aplicamos estos estilos solamente a la imagen
+    que está dentro de .about-image.
+
+    max-width:
+    evita que el logo ocupe toda la columna.
+
+    width: 100%:
+    permite que se adapte cuando la pantalla
+    se hace más pequeña.
+*/
+.about-image img {
+    width: 100%;
+    max-width: 430px;
+    height: auto;
+}
+
+
+/*
+    ==========================================
+    PEQUEÑO TEXTO "NUESTRA COMUNIDAD"
+    ==========================================
+
+    Lo utilizamos como una pequeña etiqueta
+    antes del título principal.
+*/
+.about-label {
+    color: var(--kakbe-turquoise);
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    /* Separa un poco las letras */
+    letter-spacing: 0.12rem;
+}
+
+
+/*
+    ==========================================
+    TÍTULO
+    ==========================================
+*/
+.about-title {
+    color: var(--kakbe-dark);
+
+    font-size: 2.5rem;
+    font-weight: 700;
+
+    /* Espacio entre el título y el texto */
+    margin: 0.5rem 0 1.5rem;
+}
+
+
+/*
+    ==========================================
+    DESCRIPCIÓN
+    ==========================================
+
+    line-height:
+    aumenta el espacio entre líneas para hacer
+    más cómoda la lectura.
+*/
+.about-description {
+    color: var(--kakbe-dark);
+
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+
+/*
+    ==========================================
+    VALORES
+    ==========================================
+
+    Cada valor se convierte en una pequeña tarjeta.
+
+    El fondo blanco ayuda a separar visualmente
+    los valores del fondo crema de la sección.
+*/
+.about-value {
+    background-color: var(--kakbe-white);
+
+    padding: 1.25rem;
+
+    border-radius: 14px;
+
+    /* La tarjeta ocupará toda la altura disponible
+       dentro de su columna. */
+    height: 100%;
+
+    /*
+        Una sombra muy suave da profundidad
+        sin hacer que la tarjeta se vea pesada.
+    */
+    box-shadow: 0 4px 15px rgba(41, 75, 82, 0.08);
+}
+
+
+/*
+    Título de cada valor:
+
+    Comunidad
+    Tecnología
+    Solidaridad
+    Oportunidades
+*/
+.about-value h3 {
+    color: var(--kakbe-purple);
+
+    font-size: 1.1rem;
+    font-weight: 700;
+
+    margin-bottom: 0.5rem;
+}
+
+
+/*
+    Descripción pequeña de cada valor.
+*/
+.about-value p {
+    color: var(--kakbe-dark);
+
+    font-size: 0.95rem;
+
+    /* Bootstrap/p normalmente agrega margen inferior.
+       Lo quitamos para que la tarjeta quede equilibrada. */
+    margin-bottom: 0;
+}
