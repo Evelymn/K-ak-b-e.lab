@@ -1,84 +1,157 @@
 <!--
     ==========================================
-    SOBRE NOSOTRAS
+    SECCIÓN: SOBRE NOSOTRAS
     ==========================================
 
-    En esta sección ya no repetimos el logo.
+    Esta sección explica qué tipo de comunidad
+    queremos construir.
 
-    El Hero presenta visualmente la marca.
-    Esta sección tiene otra función:
-    explicar quiénes somos y qué queremos construir.
+    El Hero ya presenta la marca y explica
+    rápidamente qué es k’ak’b’e.lab.
+
+    Por eso aquí no repetimos el logo ni
+    información visual innecesaria.
+
+    id="nosotras":
+    permite que el Navbar pueda llevar al usuario
+    directamente hasta esta sección utilizando:
+
+    href="#nosotras"
 -->
 <section class="about" id="nosotras">
 
+    <!--
+        container:
+        clase de Bootstrap que mantiene el contenido
+        centrado y evita que quede pegado a los
+        extremos de la pantalla.
+    -->
     <div class="container">
 
 
         <!--
+            ==========================================
             INTRODUCCIÓN
+            ==========================================
+
+            about-intro:
+            clase propia que utilizamos para controlar
+            el ancho de este bloque desde CSS.
 
             text-center:
-            centra todo el contenido.
+            clase de Bootstrap que centra el texto.
 
             mx-auto:
-            nos ayudará a mantener el bloque
-            centrado dentro de la página.
+            coloca automáticamente espacio a izquierda
+            y derecha para mantener el bloque centrado.
         -->
         <div class="about-intro text-center mx-auto">
 
+
+            <!--
+                Pequeña etiqueta que identifica
+                de qué trata esta sección.
+            -->
             <span class="about-label">
                 NUESTRA COMUNIDAD
             </span>
 
+
+            <!--
+                Título principal de la sección.
+
+                El <span> nos permite darle un color
+                diferente solamente a:
+
+                "queremos crecer juntas."
+            -->
             <h2 class="about-title">
+
                 Más que aprender tecnología,
                 <span>queremos crecer juntas.</span>
+
             </h2>
 
+
+            <!--
+                Descripción breve de la comunidad.
+
+                Evitamos hacer este texto demasiado largo
+                porque posteriormente tenemos una sección
+                completa dedicada al propósito.
+            -->
             <p class="about-description">
+
                 k’ak’b’e.lab nace como una comunidad de estudiantes
                 de la Universidad del Valle de Guatemala que busca
                 acercar la tecnología a niñas y jóvenes mediante
                 espacios donde puedan aprender, experimentar y crear.
+
             </p>
 
         </div>
 
 
         <!--
+            ==========================================
             PILARES DE LA COMUNIDAD
+            ==========================================
 
             row:
-            crea una fila.
+            crea una fila utilizando el Grid de Bootstrap.
 
             g-4:
-            agrega espacio entre cada elemento.
+            agrega separación entre las columnas.
 
-            mt-5:
-            separa los pilares del texto anterior.
+            mt-3:
+            agrega una separación moderada entre
+            la introducción y los pilares.
+
+            text-center:
+            centra el contenido de cada pilar.
+
+            about-pillars:
+            clase propia que limita el ancho total
+            del grupo.
+
+            Esto evita que en monitores grandes los
+            tres pilares queden demasiado alejados.
         -->
-        <div class="row g-4 mt-5 text-center">
+        <div class="row g-4 mt-3 text-center about-pillars">
 
 
             <!--
+                ======================================
+                PILAR 1: TECNOLOGÍA
+                ======================================
+
                 col-md-4:
-                desde pantallas medianas cada elemento
-                ocupa 4 de las 12 columnas.
+                desde pantallas medianas este elemento
+                ocupa 4 de las 12 columnas de Bootstrap.
+
+                Como tenemos:
 
                 4 + 4 + 4 = 12
 
-                Por eso tendremos tres elementos
-                distribuidos uniformemente.
+                los tres pilares caben en una sola fila.
             -->
             <div class="col-md-4">
 
                 <div class="about-pillar">
 
+                    <!--
+                        Pequeño símbolo relacionado
+                        con programación y tecnología.
+                    -->
                     <div class="pillar-symbol">
                         &lt;/&gt;
                     </div>
 
-                    <h3>Tecnología</h3>
+
+                    <h3>
+                        Tecnología
+                    </h3>
+
 
                     <p>
                         Aprendemos creando, experimentando
@@ -90,6 +163,11 @@
             </div>
 
 
+            <!--
+                ======================================
+                PILAR 2: COMUNIDAD
+                ======================================
+            -->
             <div class="col-md-4">
 
                 <div class="about-pillar">
@@ -98,7 +176,11 @@
                         ◇
                     </div>
 
-                    <h3>Comunidad</h3>
+
+                    <h3>
+                        Comunidad
+                    </h3>
+
 
                     <p>
                         Creamos espacios donde podamos
@@ -110,6 +192,11 @@
             </div>
 
 
+            <!--
+                ======================================
+                PILAR 3: OPORTUNIDADES
+                ======================================
+            -->
             <div class="col-md-4">
 
                 <div class="about-pillar">
@@ -118,7 +205,11 @@
                         ♡
                     </div>
 
-                    <h3>Oportunidades</h3>
+
+                    <h3>
+                        Oportunidades
+                    </h3>
+
 
                     <p>
                         Compartimos herramientas y oportunidades

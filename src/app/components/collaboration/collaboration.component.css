@@ -3,18 +3,23 @@
     SECCIÓN: COLABORA CON NOSOTRAS
     ==========================================
 
-    Esta sección está dirigida especialmente a:
-    empresas, profesionales, instituciones
-    y organizaciones que quieran colaborar.
+    Esta sección tiene una función estratégica:
 
-    Usamos un fondo claro para mantenerla limpia,
-    pero la diferenciamos con detalles de color.
+    convertir el interés de empresas, profesionales
+    e instituciones en una posible colaboración.
+
+    Utilizamos fondo blanco porque las tarjetas y
+    los colores de marca ya aportan suficiente
+    contraste visual.
 */
 .collaboration {
     background-color: var(--kakbe-white);
 
-    /* Espacio vertical de toda la sección */
-    padding: 6rem 0;
+    /*
+        Dejamos espacio suficiente para diferenciar
+        la sección sin hacerla excesivamente larga.
+    */
+    padding: 4.5rem 0;
 }
 
 
@@ -23,8 +28,9 @@
     INTRODUCCIÓN
     ==========================================
 
-    Limitamos el ancho para que el texto no recorra
-    toda la pantalla en monitores grandes.
+    max-width:
+    evita que el texto recorra toda la pantalla
+    en monitores grandes.
 */
 .collaboration-intro {
     max-width: 760px;
@@ -32,8 +38,14 @@
 
 
 /*
-    Pequeño encabezado:
-    COLABORA CON NOSOTRAS
+    ==========================================
+    ETIQUETA
+    ==========================================
+
+    "COLABORA CON NOSOTRAS"
+
+    Utilizamos el mismo lenguaje visual que
+    las etiquetas de About, Purpose y Team.
 */
 .collaboration-label {
     color: var(--kakbe-turquoise);
@@ -47,7 +59,7 @@
 
 /*
     ==========================================
-    TÍTULO PRINCIPAL
+    TÍTULO
     ==========================================
 */
 .collaboration-title {
@@ -63,8 +75,11 @@
 
 
 /*
-    Destacamos únicamente:
+    Destacamos:
+
     "oportunidades juntas."
+
+    utilizando el violeta de la identidad.
 */
 .collaboration-title span {
     color: var(--kakbe-purple);
@@ -72,7 +87,9 @@
 
 
 /*
-    Texto introductorio.
+    ==========================================
+    DESCRIPCIÓN
+    ==========================================
 */
 .collaboration-description {
     color: var(--kakbe-dark);
@@ -86,28 +103,21 @@
 
 /*
     ==========================================
-    FORMAS DE COLABORACIÓN
+    TARJETAS DE COLABORACIÓN
     ==========================================
 
-    Aquí sí usamos bloques visuales porque cada uno
-    representa una forma DIFERENTE de colaborar:
+    En esta sección las tarjetas sí tienen una
+    función clara porque representan cuatro formas
+    diferentes de colaborar.
 
-    - charlas
-    - talleres
-    - becas
-    - recursos
-
-    No son solamente decoración.
+    border-top:
+    crea un acento turquesa que conecta cada tarjeta
+    con la identidad visual de k’ak’b’e.lab.
 */
 .collaboration-item {
     background-color: var(--kakbe-white);
 
     border: 1px solid rgba(41, 75, 82, 0.10);
-
-    /*
-        Línea superior de color que conecta
-        visualmente con nuestra identidad.
-    */
     border-top: 4px solid var(--kakbe-turquoise);
 
     border-radius: 14px;
@@ -115,20 +125,15 @@
     padding: 1.8rem;
 
     /*
-        Todas las tarjetas tendrán la misma altura
-        dentro de la fila de Bootstrap.
+        Permite que todas las tarjetas de una fila
+        tengan la misma altura.
     */
     height: 100%;
 
-    /*
-        Sombra discreta.
-        Queremos profundidad, no tarjetas pesadas.
-    */
     box-shadow: 0 8px 25px rgba(41, 75, 82, 0.06);
 
     /*
-        Preparamos una transición suave
-        para el hover.
+        Creamos una transición suave para el hover.
     */
     transition:
         transform 0.3s ease,
@@ -138,11 +143,25 @@
 
 
 /*
-    Cuando el usuario coloca el mouse encima:
+    ==========================================
+    HOVER
+    ==========================================
+
+    IMPORTANTE:
+
+    El selector correcto es:
+
+    .collaboration-item:hover
+
+    NO:
+
+    .collaboration-item\:hover
+
+    Cuando colocamos el mouse encima:
 
     - la tarjeta sube ligeramente
-    - aumenta un poco la sombra
-    - la línea cambia de turquesa a violeta
+    - aumenta la sombra
+    - la línea superior cambia a violeta
 */
 .collaboration-item:hover {
     transform: translateY(-6px);
@@ -158,8 +177,8 @@
     NÚMEROS 01 / 02 / 03 / 04
     ==========================================
 
-    Funcionan como detalle gráfico y ayudan
-    a ordenar visualmente la información.
+    Funcionan como elemento visual y ayudan
+    a organizar rápidamente la información.
 */
 .collaboration-number {
     display: block;
@@ -174,7 +193,9 @@
 
 
 /*
-    Título de cada forma de colaboración.
+    ==========================================
+    TÍTULO DE CADA TARJETA
+    ==========================================
 */
 .collaboration-item h3 {
     color: var(--kakbe-dark);
@@ -182,12 +203,16 @@
     font-size: 1.2rem;
     font-weight: 700;
 
+    line-height: 1.25;
+
     margin-bottom: 0.8rem;
 }
 
 
 /*
-    Descripción de cada forma de colaboración.
+    ==========================================
+    DESCRIPCIÓN DE CADA TARJETA
+    ==========================================
 */
 .collaboration-item p {
     color: var(--kakbe-dark);
@@ -201,19 +226,22 @@
 
 /*
     ==========================================
-    LLAMADA A LA ACCIÓN FINAL
+    CTA FINAL
     ==========================================
 
-    Separamos el CTA de las cuatro opciones
-    para que el usuario entienda:
-
-    "Ya vi cómo puedo ayudar. ¿Ahora qué hago?"
+    Separamos ligeramente esta parte de las
+    tarjetas para crear una conclusión clara.
 */
 .collaboration-action {
-    margin-top: 4rem;
+    margin-top: 3rem;
 }
 
 
+/*
+    Texto:
+
+    "¿Tienes otra idea para colaborar?"
+*/
 .collaboration-action p {
     color: var(--kakbe-dark);
 
@@ -225,14 +253,15 @@
 
 /*
     ==========================================
-    BOTÓN "CONVERSEMOS"
+    BOTÓN: CONVERSEMOS
     ==========================================
 
-    No utilizamos el azul predeterminado
-    de Bootstrap.
+    Utilizamos el violeta de k’ak’b’e.lab
+    como color principal.
 
-    Creamos nuestro propio botón utilizando
-    la identidad de k’ak’b’e.lab.
+    border-radius: 999px:
+    crea el botón tipo píldora utilizado también
+    en otras llamadas a la acción de la página.
 */
 .collaboration-button {
     background-color: var(--kakbe-purple);
@@ -257,8 +286,8 @@
 /*
     Hover del botón.
 
-    Cambiamos a turquesa y lo levantamos
-    ligeramente.
+    Cambiamos de violeta a turquesa
+    y levantamos ligeramente el botón.
 */
 .collaboration-button:hover {
     background-color: var(--kakbe-turquoise);
@@ -273,24 +302,24 @@
 
 /*
     ==========================================
-    RESPONSIVE
+    RESPONSIVE: CELULARES
     ==========================================
 
-    Estos cambios se aplican en celulares.
+    Estas reglas se aplican cuando la pantalla
+    tiene un ancho máximo de 767px.
 */
 @media (max-width: 767px) {
 
     /*
-        Reducimos el espacio vertical para no hacer
-        una sección excesivamente larga en móvil.
+        Reducimos el espacio vertical.
     */
     .collaboration {
-        padding: 4rem 0;
+        padding: 3.5rem 0;
     }
 
 
     /*
-        Título más pequeño para celular.
+        Reducimos el tamaño del título.
     */
     .collaboration-title {
         font-size: 2.1rem;
@@ -298,9 +327,10 @@
 
 
     /*
-        Reducimos un poco el espacio del CTA.
+        Reducimos el espacio antes del CTA.
     */
     .collaboration-action {
-        margin-top: 3rem;
+        margin-top: 2.5rem;
     }
+
 }

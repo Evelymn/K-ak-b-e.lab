@@ -1,70 +1,68 @@
 /*
     ==========================================
-    SECCIÓN SOBRE NOSOTRAS
+    SECCIÓN: SOBRE NOSOTRAS
     ==========================================
 
-    Usamos un fondo crema muy suave para diferenciar
-    esta sección del Hero, que utiliza fondo menta.
+    Esta sección utiliza un fondo crema suave.
 
-    Así evitamos que toda la página sea blanca,
-    pero mantenemos una apariencia limpia y cómoda.
+    Esto permite diferenciarla del Hero,
+    que utiliza un fondo menta.
+
+    Así evitamos tener una página completamente
+    blanca y creamos cambios visuales suaves
+    entre las diferentes secciones.
+
+    padding:
+    agrega espacio arriba y abajo.
+
+    Utilizamos 4rem porque queremos que la sección
+    tenga espacio para respirar, pero sin ocupar
+    innecesariamente toda la pantalla.
 */
 .about {
     background-color: var(--kakbe-cream);
-
-    /* Espacio arriba y abajo de toda la sección */
-    padding: 5rem 0;
+    padding: 4rem 0;
 }
 
 
 /*
     ==========================================
-    IMAGEN
+    INTRODUCCIÓN
     ==========================================
 
-    Creamos un espacio visual para la imagen.
+    Este bloque contiene:
 
-    display: flex:
-    nos permite centrar fácilmente la imagen.
+    NUESTRA COMUNIDAD
 
-    justify-content:
-    centra horizontalmente.
+    Más que aprender tecnología,
+    queremos crecer juntas.
 
-    align-items:
-    centra verticalmente.
-*/
-.about-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-/*
-    Aplicamos estos estilos solamente a la imagen
-    que está dentro de .about-image.
+    descripción...
 
     max-width:
-    evita que el logo ocupe toda la columna.
+    evita que el texto se extienda demasiado
+    horizontalmente en monitores grandes.
 
-    width: 100%:
-    permite que se adapte cuando la pantalla
-    se hace más pequeña.
+    Esto mejora la lectura y mantiene
+    una composición más ordenada.
 */
-.about-image img {
-    width: 100%;
-    max-width: 430px;
-    height: auto;
+.about-intro {
+    max-width: 950px;
 }
 
 
 /*
     ==========================================
-    PEQUEÑO TEXTO "NUESTRA COMUNIDAD"
+    ETIQUETA: "NUESTRA COMUNIDAD"
     ==========================================
 
-    Lo utilizamos como una pequeña etiqueta
-    antes del título principal.
+    Es un pequeño texto introductorio que ayuda
+    a identificar rápidamente la sección.
+
+    letter-spacing:
+    agrega espacio entre las letras para darle
+    una apariencia más similar a una etiqueta
+    o encabezado pequeño.
 */
 .about-label {
     color: var(--kakbe-turquoise);
@@ -72,15 +70,24 @@
     font-size: 0.85rem;
     font-weight: 700;
 
-    /* Separa un poco las letras */
     letter-spacing: 0.12rem;
 }
 
 
 /*
     ==========================================
-    TÍTULO
+    TÍTULO PRINCIPAL
     ==========================================
+
+    Este es uno de los textos más importantes
+    de la sección.
+
+    line-height:
+    controla la separación entre líneas.
+
+    margin:
+    agrega espacio entre la etiqueta,
+    el título y la descripción.
 */
 .about-title {
     color: var(--kakbe-dark);
@@ -88,8 +95,23 @@
     font-size: 2.5rem;
     font-weight: 700;
 
-    /* Espacio entre el título y el texto */
-    margin: 0.5rem 0 1.5rem;
+    line-height: 1.2;
+
+    margin: 0.7rem 0 1.3rem;
+}
+
+
+/*
+    Dentro del título tenemos:
+
+    <span>queremos crecer juntas.</span>
+
+    Esto nos permite destacar solamente
+    esa parte utilizando el violeta de
+    nuestra identidad.
+*/
+.about-title span {
+    color: var(--kakbe-purple);
 }
 
 
@@ -98,74 +120,193 @@
     DESCRIPCIÓN
     ==========================================
 
+    max-width:
+    evita que el párrafo sea demasiado ancho.
+
+    margin:
+    lo mantiene centrado.
+
     line-height:
-    aumenta el espacio entre líneas para hacer
-    más cómoda la lectura.
+    agrega espacio entre líneas para mejorar
+    la comodidad de lectura.
 */
 .about-description {
     color: var(--kakbe-dark);
 
     font-size: 1.05rem;
     line-height: 1.7;
+
+    max-width: 900px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
 }
 
 
 /*
     ==========================================
-    VALORES
+    CONTENEDOR DE LOS TRES PILARES
     ==========================================
 
-    Cada valor se convierte en una pequeña tarjeta.
+    Aquí están:
 
-    El fondo blanco ayuda a separar visualmente
-    los valores del fondo crema de la sección.
-*/
-.about-value {
-    background-color: var(--kakbe-white);
-
-    padding: 1.25rem;
-
-    border-radius: 14px;
-
-    /* La tarjeta ocupará toda la altura disponible
-       dentro de su columna. */
-    height: 100%;
-
-    /*
-        Una sombra muy suave da profundidad
-        sin hacer que la tarjeta se vea pesada.
-    */
-    box-shadow: 0 4px 15px rgba(41, 75, 82, 0.08);
-}
-
-
-/*
-    Título de cada valor:
-
-    Comunidad
     Tecnología
-    Solidaridad
+    Comunidad
     Oportunidades
-*/
-.about-value h3 {
-    color: var(--kakbe-purple);
 
-    font-size: 1.1rem;
+    max-width:
+    evita que los tres elementos se separen
+    excesivamente en monitores grandes.
+
+    margin-left/right: auto:
+    centra todo el grupo dentro de la página.
+*/
+.about-pillars {
+    max-width: 1100px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*
+    ==========================================
+    CADA PILAR
+    ==========================================
+
+    No utilizamos tarjetas ni fondos individuales.
+
+    Queremos que esta sección se sienta abierta,
+    cercana y ligera.
+
+    padding:
+    agrega un poco de espacio alrededor
+    del contenido de cada pilar.
+*/
+.about-pillar {
+    padding: 1.25rem;
+}
+
+
+/*
+    ==========================================
+    SÍMBOLOS
+    ==========================================
+
+    Tenemos:
+
+    </>  → Tecnología
+    ◇    → Comunidad
+    ♡    → Oportunidades
+
+    Los utilizamos como pequeños detalles visuales,
+    no como protagonistas de la sección.
+*/
+.pillar-symbol {
+    color: var(--kakbe-turquoise);
+
+    font-size: 1.4rem;
     font-weight: 700;
 
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
 }
 
 
 /*
-    Descripción pequeña de cada valor.
+    ==========================================
+    TÍTULO DE CADA PILAR
+    ==========================================
+
+    Tecnología
+    Comunidad
+    Oportunidades
 */
-.about-value p {
+.about-pillar h3 {
+    color: var(--kakbe-dark);
+
+    font-size: 1.35rem;
+    font-weight: 700;
+
+    margin-bottom: 0.6rem;
+}
+
+
+/*
+    ==========================================
+    DESCRIPCIÓN DE CADA PILAR
+    ==========================================
+
+    max-width:
+    evita que el texto se haga demasiado ancho.
+
+    margin:
+    centra el párrafo dentro de su columna.
+*/
+.about-pillar p {
     color: var(--kakbe-dark);
 
     font-size: 0.95rem;
+    line-height: 1.6;
 
-    /* Bootstrap/p normalmente agrega margen inferior.
-       Lo quitamos para que la tarjeta quede equilibrada. */
-    margin-bottom: 0;
+    max-width: 300px;
+
+    margin: 0 auto;
+}
+
+
+/*
+    ==========================================
+    RESPONSIVE: CELULARES
+    ==========================================
+
+    Esta sección se aplica cuando la pantalla
+    mide 767px o menos.
+
+    Nos permite adaptar el diseño sin cambiar
+    nuestro HTML.
+*/
+@media (max-width: 767px) {
+
+
+    /*
+        Reducimos ligeramente el espacio vertical
+        porque las pantallas móviles tienen menos
+        espacio disponible.
+    */
+    .about {
+        padding: 3.5rem 0;
+    }
+
+
+    /*
+        Reducimos el título para evitar que
+        ocupe demasiadas líneas en celular.
+    */
+    .about-title {
+        font-size: 2rem;
+    }
+
+
+    /*
+        Agregamos un pequeño espacio lateral
+        para que la introducción no quede pegada
+        a los bordes de la pantalla.
+    */
+    .about-intro {
+        padding: 0 0.75rem;
+    }
+
+
+    /*
+        En celular Bootstrap coloca los pilares
+        uno debajo del otro.
+
+        Reducimos ligeramente su padding para
+        evitar demasiado espacio vertical.
+    */
+    .about-pillar {
+        padding: 0.9rem 1rem;
+    }
+
 }

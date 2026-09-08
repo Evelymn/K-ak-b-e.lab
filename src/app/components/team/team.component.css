@@ -1,52 +1,57 @@
 /*
     ==========================================
-    SECCIÓN NUESTRO EQUIPO
+    SECCIÓN: NUESTRO EQUIPO
     ==========================================
 
-    Esta clase controla toda la sección donde
-    mostramos a las integrantes de k’ak’b’e.lab.
+    Esta sección presenta a las integrantes
+    que forman k’ak’b’e.lab.
+
+    Utilizamos fondo blanco porque las fotografías
+    ya aportan bastante contenido visual.
 
     padding:
-    agrega espacio arriba y abajo para que la
-    sección no quede apretada contra las demás.
+    agrega espacio arriba y abajo.
+
+    Utilizamos 4rem para mantener una separación
+    cómoda sin crear grandes espacios vacíos.
 */
 .team {
     background-color: var(--kakbe-white);
-    padding: 6rem 0;
+    padding: 4rem 0;
 }
 
 
 /*
     ==========================================
-    INTRODUCCIÓN DEL EQUIPO
+    INTRODUCCIÓN
     ==========================================
 
-    Este es el bloque que contiene:
-
-    NUESTRO EQUIPO
-    Conoce al equipo que impulsa k’ak’b’e.lab
-    Descripción...
-
     max-width:
-    evita que el texto ocupe todo el ancho de
-    una pantalla grande.
+    evita que el título y la descripción ocupen
+    todo el ancho de un monitor grande.
 
     margin:
-    mantiene el bloque centrado.
+    centra horizontalmente este bloque.
 */
 .team-intro {
-    max-width: 800px;
+    max-width: 850px;
     margin: 0 auto;
 }
 
 
 /*
     ==========================================
-    TEXTO PEQUEÑO "NUESTRO EQUIPO"
+    ETIQUETA: "NUESTRO EQUIPO"
     ==========================================
 
-    Lo usamos como una pequeña etiqueta antes
-    del título principal.
+    Funciona como un pequeño encabezado visual,
+    igual que:
+
+    NUESTRA COMUNIDAD
+    NUESTRO PROPÓSITO
+    COLABORA CON NOSOTRAS
+
+    Esto mantiene coherencia entre secciones.
 */
 .team-label {
     color: var(--kakbe-turquoise);
@@ -54,10 +59,6 @@
     font-size: 0.85rem;
     font-weight: 700;
 
-    /*
-        Separa ligeramente las letras para darle
-        apariencia de encabezado.
-    */
     letter-spacing: 0.15rem;
 }
 
@@ -66,10 +67,6 @@
     ==========================================
     TÍTULO PRINCIPAL
     ==========================================
-
-    Ejemplo:
-
-    Conoce al equipo que impulsa k’ak’b’e.lab
 */
 .team-title {
     color: var(--kakbe-dark);
@@ -79,23 +76,13 @@
 
     line-height: 1.2;
 
-    /*
-        Espacio entre la etiqueta, el título
-        y la descripción.
-    */
-    margin: 0.8rem 0 1rem;
+    margin: 0.7rem 0 1rem;
 }
 
 
 /*
-    Si dentro del título utilizamos un <span>,
-    podemos destacar esa parte con el violeta
-    de nuestra identidad.
-
-    Ejemplo:
-
-    Conoce al equipo que impulsa
-    <span>k’ak’b’e.lab</span>
+    Destacamos k’ak’b’e.lab utilizando
+    el violeta de nuestra identidad.
 */
 .team-title span {
     color: var(--kakbe-purple);
@@ -104,12 +91,14 @@
 
 /*
     ==========================================
-    DESCRIPCIÓN DEL EQUIPO
+    DESCRIPCIÓN
     ==========================================
 
-    line-height:
-    aumenta el espacio entre las líneas y hace
-    que el párrafo sea más cómodo de leer.
+    max-width:
+    limita el ancho para mejorar la lectura.
+
+    margin:
+    mantiene el texto centrado.
 */
 .team-description {
     color: var(--kakbe-dark);
@@ -117,7 +106,9 @@
     font-size: 1.05rem;
     line-height: 1.7;
 
-    margin-bottom: 0;
+    max-width: 800px;
+
+    margin: 0 auto;
 }
 
 
@@ -126,7 +117,7 @@
     TARJETA DE CADA INTEGRANTE
     ==========================================
 
-    Cada integrante tendrá una tarjeta completa:
+    Cada tarjeta contiene:
 
     ┌───────────────────┐
     │                   │
@@ -136,46 +127,43 @@
     ├───────────────────┤
     │ Nombre            │
     │ Rol               │
-    │ Universidad       │
     └───────────────────┘
 
-    background-color:
-    coloca fondo blanco.
+    max-width:
+    evita que las tarjetas sean demasiado grandes.
 
-    border:
-    agrega un borde muy suave.
-
-    border-radius:
-    redondea ligeramente las esquinas.
-
-    overflow: hidden:
-    evita que la fotografía sobresalga de
-    las esquinas de la tarjeta.
-
-    height: 100%:
-    ayuda a que las tarjetas tengan una
-    altura uniforme.
+    margin:
+    centra cada tarjeta dentro de su
+    columna Bootstrap.
 */
 .team-card {
     background-color: var(--kakbe-white);
+
     border: 1px solid rgba(41, 75, 82, 0.10);
-    border-radius: 0%;
-    overflow: hidden;
-    height: 100%;
 
     /*
-        Evita que la tarjeta se vuelva excesivamente ancha
-        en monitores grandes.
+        Utilizamos esquinas ligeramente redondeadas.
+
+        No queremos círculos ni tarjetas demasiado
+        redondeadas porque buscamos una apariencia
+        profesional y tecnológica.
     */
+    border-radius: 12px;
+
+    overflow: hidden;
+
     max-width: 300px;
 
-    /*
-        Centra la tarjeta dentro de la columna Bootstrap.
-    */
+    height: 100%;
+
     margin: 0 auto;
 
     box-shadow: 0 8px 25px rgba(41, 75, 82, 0.07);
 
+    /*
+        Preparamos una animación suave
+        para cuando el usuario pase el mouse.
+    */
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
@@ -184,17 +172,17 @@
 
 /*
     ==========================================
-    EFECTO AL PASAR EL MOUSE
+    HOVER DE LA TARJETA
     ==========================================
 
-    :hover significa:
-    "cuando el usuario coloca el mouse encima".
+    :hover:
+    se activa cuando colocamos el mouse encima.
 
     translateY(-5px):
-    mueve ligeramente la tarjeta hacia arriba.
+    mueve la tarjeta ligeramente hacia arriba.
 
-    Esto agrega interacción sin exagerar
-    la animación.
+    Esto agrega interacción sin utilizar
+    una animación exagerada.
 */
 .team-card:hover {
     transform: translateY(-5px);
@@ -208,20 +196,17 @@
     CONTENEDOR DE LA FOTOGRAFÍA
     ==========================================
 
-    Esta parte es MUY importante.
-
     aspect-ratio: 1 / 1:
-    obliga al espacio de la fotografía a ser
-    completamente cuadrado.
+    obliga al espacio de la fotografía
+    a mantenerse cuadrado.
 
     Ejemplo:
 
     300px × 300px
-    400px × 400px
 
     overflow: hidden:
-    oculta cualquier parte de la imagen que
-    sobresalga del cuadrado.
+    oculta cualquier parte de la fotografía
+    que sobresalga del contenedor.
 */
 .team-photo-container {
     width: 100%;
@@ -231,8 +216,8 @@
     overflow: hidden;
 
     /*
-        Fondo provisional por si alguna imagen
-        tarda en cargar.
+        Si alguna fotografía tarda en cargar,
+        aparecerá temporalmente el fondo menta.
     */
     background-color: var(--kakbe-mint);
 }
@@ -243,16 +228,16 @@
     FOTOGRAFÍA
     ==========================================
 
-    width y height:
-    hacen que la fotografía ocupe completamente
-    el cuadrado anterior.
+    width + height:
+    hacen que la fotografía llene completamente
+    el contenedor.
 
     object-fit: cover:
-    recorta automáticamente la imagen para llenar
-    el espacio SIN deformar a la persona.
+    recorta automáticamente lo necesario
+    SIN deformar la fotografía.
 
-    Esto es muy útil porque las cinco fotografías
-    pueden tener tamaños diferentes.
+    Esto es importante porque las fotografías
+    originales pueden tener proporciones diferentes.
 */
 .team-photo {
     width: 100%;
@@ -261,9 +246,8 @@
     object-fit: cover;
 
     /*
-        object-position: center:
-        intenta mantener el centro de la fotografía
-        visible cuando necesita recortarla.
+        Mantiene el centro de la fotografía
+        como referencia durante el recorte.
     */
     object-position: center;
 }
@@ -274,14 +258,12 @@
     INFORMACIÓN DE LA INTEGRANTE
     ==========================================
 
-    Esta zona está debajo de la fotografía.
-
     padding:
-    agrega espacio interno para que el texto
-    no quede pegado a los bordes.
+    crea espacio entre el texto y los bordes
+    de la tarjeta.
 */
 .team-info {
-    padding: 1.4rem 1.5rem 1.6rem;
+    padding: 1.25rem 1.4rem 1.4rem;
 }
 
 
@@ -290,14 +272,13 @@
     NOMBRE
     ==========================================
 
-    Es la información más importante después
-    de la fotografía, por eso tiene mayor tamaño
-    y grosor.
+    Tiene mayor peso visual porque es la
+    información principal de la tarjeta.
 */
 .team-name {
     color: var(--kakbe-dark);
 
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     font-weight: 700;
 
     margin-bottom: 0.35rem;
@@ -306,18 +287,11 @@
 
 /*
     ==========================================
-    ROL DENTRO DE K’AK’B’E.LAB
+    ROL
     ==========================================
 
-    Utilizamos violeta para diferenciar el rol
-    del resto de información.
-
-    Ejemplos:
-
-    Coordinación general
-    Comunicación
-    Talleres
-    Tecnología
+    Utilizamos violeta para diferenciar
+    la responsabilidad de cada integrante.
 */
 .team-role {
     color: var(--kakbe-purple);
@@ -325,64 +299,37 @@
     font-size: 0.95rem;
     font-weight: 600;
 
-    margin-bottom: 1rem;
-}
-
-
-/*
-    ==========================================
-    INFORMACIÓN ACADÉMICA
-    ==========================================
-
-    Esta información es secundaria.
-
-    Por eso usamos:
-    - tamaño más pequeño
-    - menor intensidad visual
-
-    Aquí posteriormente podríamos poner:
-
-    Ingeniería en ...
-    Universidad del Valle de Guatemala
-*/
-.team-career {
-    color: var(--kakbe-dark);
-
-    font-size: 0.85rem;
-
     /*
-        opacity reduce un poco la intensidad
-        del color.
+        Ya no tenemos información debajo del rol,
+        así que eliminamos el margen inferior.
     */
-    opacity: 0.7;
-
     margin-bottom: 0;
 }
 
 
 /*
     ==========================================
-    RESPONSIVE - CELULARES
+    RESPONSIVE: CELULARES
     ==========================================
 
-    Cuando la pantalla mide 767px o menos,
-    reducimos algunos tamaños para que la sección
-    se adapte mejor al teléfono.
+    Estas reglas se aplican cuando la pantalla
+    mide 767px o menos.
 */
 @media (max-width: 767px) {
 
+
     /*
-        Reducimos el espacio vertical de
-        toda la sección.
+        Reducimos ligeramente el espacio vertical
+        de toda la sección.
     */
     .team {
-        padding: 4rem 0;
+        padding: 3.5rem 0;
     }
 
 
     /*
-        El título será un poco más pequeño
-        para que no ocupe demasiadas líneas.
+        Reducimos el tamaño del título para
+        adaptarlo a pantallas pequeñas.
     */
     .team-title {
         font-size: 2rem;
@@ -390,10 +337,22 @@
 
 
     /*
-        Agregamos un poco de espacio lateral
-        al texto introductorio.
+        Evitamos que la introducción quede
+        demasiado cerca de los bordes.
     */
     .team-intro {
-        padding: 0 1rem;
+        padding: 0 0.75rem;
     }
+
+
+    /*
+        En celular permitimos que la tarjeta
+        utilice un poco más de ancho disponible,
+        pero sin ocupar absolutamente toda
+        la pantalla.
+    */
+    .team-card {
+        max-width: 340px;
+    }
+
 }

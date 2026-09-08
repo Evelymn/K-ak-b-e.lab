@@ -1,0 +1,212 @@
+/*
+    ==========================================
+    SECCIÓN: CONTACTO
+    ==========================================
+
+    Contacto utiliza un fondo oscuro para crear
+    un cambio fuerte de contraste al final
+    de nuestra landing page.
+
+    Esto también ayuda a comunicar visualmente:
+
+    "Llegaste a una acción importante".
+*/
+.contact {
+    background-color: var(--kakbe-dark);
+
+    padding: 5rem 0;
+}
+
+
+/*
+    ==========================================
+    ETIQUETA "CONTACTO"
+    ==========================================
+
+    Mantenemos el turquesa utilizado en las
+    etiquetas de las otras secciones.
+*/
+.contact-label {
+    color: var(--kakbe-turquoise);
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    letter-spacing: 0.15rem;
+}
+
+
+/*
+    ==========================================
+    TÍTULO
+    ==========================================
+
+    Como el fondo es oscuro utilizamos blanco
+    para obtener suficiente contraste.
+*/
+.contact-title {
+    color: var(--kakbe-white);
+
+    font-size: 2.7rem;
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    margin: 0.8rem 0 1.3rem;
+}
+
+
+/*
+    Destacamos:
+
+    "con nosotras?"
+
+    utilizando turquesa.
+*/
+.contact-title span {
+    color: var(--kakbe-turquoise);
+}
+
+
+/*
+    ==========================================
+    DESCRIPCIÓN
+    ==========================================
+
+    Utilizamos blanco con un poco de transparencia
+    para que tenga menor peso visual que el título.
+*/
+.contact-description {
+    color: rgba(255, 255, 255, 0.82);
+
+    font-size: 1.05rem;
+    line-height: 1.7;
+
+    max-width: 550px;
+
+    margin-bottom: 0;
+}
+
+
+/*
+    ==========================================
+    OPCIONES DE CONTACTO
+    ==========================================
+
+    display: grid:
+    nos permite organizar los diferentes canales.
+
+    gap:
+    agrega separación entre ellos.
+*/
+.contact-options {
+    display: grid;
+
+    gap: 1rem;
+}
+
+
+/*
+    ==========================================
+    CADA CANAL DE CONTACTO
+    ==========================================
+
+    Utilizamos una línea inferior en lugar de
+    tarjetas completas.
+
+    Esto mantiene el diseño limpio y evita
+    repetir nuevamente el estilo de cards.
+*/
+.contact-item {
+    padding: 1rem 0 1.2rem;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+
+/*
+    Instagram
+    Correo
+    Contacto
+*/
+.contact-item-label {
+    display: block;
+
+    color: var(--kakbe-turquoise);
+
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08rem;
+
+    margin-bottom: 0.35rem;
+}
+
+
+/*
+    ==========================================
+    ENLACES
+    ==========================================
+
+    Quitamos el subrayado predeterminado
+    y utilizamos blanco.
+*/
+.contact-link {
+    color: var(--kakbe-white);
+
+    font-size: 1.1rem;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease,
+        padding-left 0.3s ease;
+}
+
+
+/*
+    Cuando pasamos el mouse:
+
+    - el enlace cambia a turquesa
+    - se desplaza ligeramente hacia la derecha
+*/
+.contact-link:hover {
+    color: var(--kakbe-turquoise);
+
+    padding-left: 0.3rem;
+}
+
+
+/*
+    ==========================================
+    RESPONSIVE: CELULARES
+    ==========================================
+*/
+@media (max-width: 767px) {
+
+    /*
+        Reducimos el espacio vertical.
+    */
+    .contact {
+        padding: 4rem 0;
+    }
+
+
+    /*
+        Reducimos el tamaño del título.
+    */
+    .contact-title {
+        font-size: 2.1rem;
+    }
+
+
+    /*
+        En celular dejamos un poco más de
+        separación antes de los canales.
+    */
+    .contact-options {
+        margin-top: 0.5rem;
+    }
+
+}

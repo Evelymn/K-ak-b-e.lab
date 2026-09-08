@@ -1,35 +1,40 @@
 <!--
     ==========================================
-    COLABORA CON NOSOTRAS
+    SECCIÓN: COLABORA CON NOSOTRAS
     ==========================================
 
-    Esta sección tiene un objetivo muy concreto:
+    Esta sección está dirigida principalmente a:
 
-    mostrar a empresas, profesionales,
-    instituciones y organizaciones cómo pueden
-    colaborar con k’ak’b’e.lab.
+    - empresas
+    - profesionales
+    - instituciones
+    - organizaciones
+
+    Su objetivo es explicar de manera concreta
+    cómo pueden colaborar con k’ak’b’e.lab.
 
     id="colabora":
-    permite conectar esta sección con el Navbar
-    mediante:
+    permite conectar esta sección con enlaces como:
 
     href="#colabora"
 -->
-<section
-    class="collaboration"
-    id="colabora"
->
+<section class="collaboration" id="colabora">
 
+    <!--
+        container:
+        mantiene el contenido centrado y evita
+        que quede pegado a los bordes de la pantalla.
+    -->
     <div class="container">
 
 
         <!--
-            ======================================
-            ENCABEZADO
-            ======================================
+            ==========================================
+            INTRODUCCIÓN
+            ==========================================
 
-            Primero explicamos qué tipo de
-            colaboración estamos buscando.
+            Primero explicamos por qué buscamos
+            colaboraciones y con quiénes queremos conectar.
         -->
         <div class="collaboration-intro">
 
@@ -38,6 +43,10 @@
             </span>
 
 
+            <!--
+                El span permite destacar visualmente
+                "oportunidades juntas." utilizando violeta.
+            -->
             <h2 class="collaboration-title">
                 Construyamos
                 <span>oportunidades juntas.</span>
@@ -45,37 +54,48 @@
 
 
             <p class="collaboration-description">
-
-                Buscamos conectar con empresas,
-                profesionales, instituciones y organizaciones
-                que compartan nuestro interés por acercar
-                la tecnología y nuevas oportunidades
-                a niñas y jóvenes.
-
+                Buscamos conectar con empresas, profesionales,
+                instituciones y organizaciones que compartan
+                nuestro interés por acercar la tecnología y
+                nuevas oportunidades a niñas y jóvenes.
             </p>
 
         </div>
 
 
         <!--
-            ======================================
+            ==========================================
             FORMAS DE COLABORACIÓN
-            ======================================
+            ==========================================
 
-            Bootstrap utiliza 12 columnas.
+            row:
+            crea una fila utilizando Bootstrap.
+
+            g-4:
+            agrega separación entre las tarjetas.
+
+            mt-4:
+            separa las tarjetas de la introducción
+            sin generar demasiado espacio vacío.
 
             col-md-6:
-            en tablet tendremos 2 elementos por fila.
+            en tablet tendremos 2 tarjetas por fila.
 
             col-lg-3:
-            en computadora tendremos 4 elementos.
+            en computadora tendremos 4 tarjetas por fila.
+
+            Bootstrap utiliza 12 columnas:
 
             3 + 3 + 3 + 3 = 12
         -->
-        <div class="row g-4 mt-5">
+        <div class="row g-4 mt-4">
 
 
-            <!-- CHARLAS Y MENTORÍAS -->
+            <!--
+                ======================================
+                01 - CHARLAS Y MENTORÍAS
+                ======================================
+            -->
             <div class="col-md-6 col-lg-3">
 
                 <article class="collaboration-item">
@@ -99,7 +119,11 @@
             </div>
 
 
-            <!-- TALLERES -->
+            <!--
+                ======================================
+                02 - TALLERES
+                ======================================
+            -->
             <div class="col-md-6 col-lg-3">
 
                 <article class="collaboration-item">
@@ -123,7 +147,11 @@
             </div>
 
 
-            <!-- BECAS -->
+            <!--
+                ======================================
+                03 - BECAS Y OPORTUNIDADES
+                ======================================
+            -->
             <div class="col-md-6 col-lg-3">
 
                 <article class="collaboration-item">
@@ -146,7 +174,11 @@
             </div>
 
 
-            <!-- RECURSOS -->
+            <!--
+                ======================================
+                04 - RECURSOS Y APOYO
+                ======================================
+            -->
             <div class="col-md-6 col-lg-3">
 
                 <article class="collaboration-item">
@@ -173,16 +205,14 @@
 
 
         <!--
-            ======================================
+            ==========================================
             LLAMADA A LA ACCIÓN
-            ======================================
+            ==========================================
 
-            Después de explicar cómo colaborar,
-            debemos decirle al visitante qué hacer.
+            Después de explicar las diferentes formas
+            de colaboración, ofrecemos una acción clara.
 
-            Todavía no colocamos correo o WhatsApp
-            directamente aquí porque posteriormente
-            tendremos ContactComponent.
+            El botón lleva a la sección Contacto.
         -->
         <div class="collaboration-action text-center">
 
@@ -192,10 +222,6 @@
             </p>
 
 
-            <!--
-                Este botón llevará posteriormente
-                a nuestra sección de contacto.
-            -->
             <a
                 href="#contacto"
                 class="btn collaboration-button"
@@ -204,7 +230,6 @@
             </a>
 
         </div>
-
 
     </div>
 

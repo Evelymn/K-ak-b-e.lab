@@ -16,12 +16,21 @@ import { TeamComponent } from './components/team/team.component';
 // Este componente mostrará el propósito de k’ak’b’e.lab:
 // por qué nace la comunidad y qué busca construir.
 import { PurposeComponent } from './components/purpose/purpose.component';
+/*
+    Importamos ContactComponent para poder utilizar
+    la sección de contacto dentro de nuestra página.
+*/
+import { ContactComponent } from './components/contact/contact.component';
 // Importamos CollaborationComponent.
 //
 // Esta sección mostrará las diferentes formas
 // en que empresas, profesionales e instituciones
 // pueden colaborar con k’ak’b’e.lab.
 import { CollaborationComponent } from './components/collaboration/collaboration.component';
+
+// Importamos FooterComponent para mostrar
+// el pie de página al final de nuestra aplicación.
+import { FooterComponent } from './components/footer/footer.component';
 @Component({
   selector: 'app-root',
 
@@ -42,7 +51,9 @@ import { CollaborationComponent } from './components/collaboration/collaboration
     AboutComponent,
     TeamComponent,
     PurposeComponent,
-    CollaborationComponent
+    CollaborationComponent,
+    ContactComponent,
+    FooterComponent
 ],
 
 
