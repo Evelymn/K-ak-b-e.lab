@@ -48,7 +48,7 @@ export class TeamComponent {
             nombre: 'Tatiana Ivonne López',
             rol: 'Diseño y experiencia',
             imagen: 'assets/equipo/integrante-4.jpeg',
-            linkedin: ''
+            linkedin: 'https://www.linkedin.com/in/tatiiles/'
         },
 
         {
