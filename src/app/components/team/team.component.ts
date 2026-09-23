@@ -27,7 +27,7 @@ export class TeamComponent {
             nombre: 'Habil Xol Par',
             rol: 'Coordinación general',
             imagen: 'assets/equipo/integrante-1.jpeg',
-            linkedin: ''
+            linkedin: 'https://www.linkedin.com/in/habilxol'
         },
 
         {
