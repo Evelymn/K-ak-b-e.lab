@@ -41,7 +41,7 @@ export class TeamComponent {
             nombre: 'Yaxchel Xol Par',
             rol: 'Talleres y contenido',
             imagen: 'assets/equipo/integrante-3.jpeg',
-            linkedin: ''
+            linkedin: 'https://www.linkedin.com/in/yaxchel-xol-1385a3350'
         },
 
         {
