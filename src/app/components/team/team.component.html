@@ -1,173 +1,119 @@
 <!--
     ==========================================
-    SECCIÓN: NUESTRO EQUIPO
+    NUESTRO EQUIPO
     ==========================================
 
-    Esta sección presenta a las cinco estudiantes
-    que forman parte de k’ak’b’e.lab.
+    Esta sección utiliza una composición horizontal
+    y compacta.
 
-    Su función dentro de la página es generar
-    confianza y mostrar que existen personas reales
-    detrás de la comunidad.
+    No utilizamos tarjetas grandes.
 
-    id="equipo":
-    permite conectar esta sección con el Navbar
-    mediante:
+    IZQUIERDA:
+    presentación general del equipo.
 
-    href="#equipo"
+    DERECHA:
+    cinco integrantes mostradas como un único grupo visual.
 -->
 <section class="team" id="equipo">
 
-    <!--
-        container:
-        mantiene todo el contenido centrado
-        y evita que quede pegado a los bordes
-        de la pantalla.
-    -->
     <div class="container">
 
 
         <!--
             ==========================================
-            INTRODUCCIÓN DEL EQUIPO
+            COMPOSICIÓN PRINCIPAL
             ==========================================
-
-            Este bloque explica quiénes son las
-            personas que aparecerán a continuación.
-
-            text-center:
-            centra el contenido.
-
-            mx-auto:
-            centra horizontalmente el bloque.
         -->
-        <div class="team-intro text-center mx-auto">
-
-            <!-- Pequeña etiqueta de la sección -->
-            <span class="team-label">
-                NUESTRO EQUIPO
-            </span>
+        <div class="team-layout">
 
 
             <!--
-                Título principal.
+                ======================================
+                INFORMACIÓN GENERAL
+                ======================================
 
-                Utilizamos un <span> para poder
-                destacar k’ak’b’e.lab con otro color.
+                La carrera y la universidad aparecen
+                solamente aquí porque son información
+                compartida por todas las integrantes.
             -->
-            <h2 class="team-title">
-                Conoce al equipo que impulsa
-                <span>k’ak’b’e.lab</span>
-            </h2>
+            <div class="team-intro">
+
+                <span class="team-label">
+                    NUESTRO EQUIPO
+                </span>
 
 
-            <!--
-                Descripción general.
+                <h2 class="team-title">
 
-                Como todas pertenecen a la misma
-                universidad, mencionamos esta información
-                una sola vez aquí y evitamos repetirla
-                innecesariamente cinco veces.
-            -->
-            <p class="team-description">
-                Somos cinco estudiantes de la Universidad del Valle
-                de Guatemala unidas por una misma visión: acercar
-                la tecnología, el conocimiento y nuevas oportunidades
-                a más niñas y jóvenes.
-            </p>
+                    Cinco estudiantes,
 
-        </div>
+                    <span>
+                        una visión compartida.
+                    </span>
+
+                </h2>
 
 
-        <!--
-            ==========================================
-            INTEGRANTES
-            ==========================================
+                <p class="team-description">
 
-            row:
-            crea una fila utilizando Bootstrap.
+                    Somos estudiantes de la Licenciatura
+                    en Sistemas Informáticos de la Universidad
+                    del Valle de Guatemala, unidas por el interés
+                    de utilizar la tecnología para aprender,
+                    crear y abrir nuevas oportunidades.
 
-            g-4:
-            agrega espacio entre las columnas.
-
-            mt-4:
-            separa las fotografías de la introducción
-            sin dejar demasiado espacio vacío.
-
-            justify-content-center:
-            centra las tarjetas.
-
-            Esto es especialmente útil en la segunda fila,
-            porque solamente tendremos dos integrantes.
-        -->
-        <div class="row g-4 mt-4 justify-content-center">
-
-
-            <!--
-                @for:
-                recorre el arreglo "integrantes"
-                definido en team.component.ts.
-
-                Angular repetirá el contenido que está
-                dentro de las llaves una vez por cada
-                integrante del arreglo.
-
-                track integrante.nombre:
-                ayuda a Angular a identificar cada elemento
-                cuando actualiza la página.
-            -->
-            @for (integrante of integrantes; track integrante.nombre) {
+                </p>
 
 
                 <!--
-                    ======================================
-                    COLUMNA DE UNA INTEGRANTE
-                    ======================================
+                    Pequeña síntesis visual.
 
-                    col-12:
-                    en celular ocupa todo el ancho.
-
-                    col-md-6:
-                    en tablet tendremos hasta 2 por fila.
-
-                    col-lg-4:
-                    en computadora tendremos hasta 3 por fila.
+                    No es información adicional:
+                    resume las distintas áreas que
+                    convergen dentro del equipo.
                 -->
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="team-areas">
+
+                    <span>Tecnología</span>
+
+                    <span class="team-dot">·</span>
+
+                    <span>Diseño</span>
+
+                    <span class="team-dot">·</span>
+
+                    <span>Comunicación</span>
+
+                    <span class="team-dot">·</span>
+
+                    <span>Comunidad</span>
+
+                </div>
+
+            </div>
 
 
-                    <!--
-                        article:
-                        utilizamos una etiqueta semántica porque
-                        cada tarjeta representa una integrante
-                        independiente del equipo.
-                    -->
-                    <article class="team-card">
+            <!--
+                ======================================
+                INTEGRANTES
+                ======================================
+
+                @for recorre el arreglo integrantes
+                definido en team.component.ts.
+
+                Cada integrante utiliza exactamente
+                la misma estructura.
+            -->
+            <div class="team-members">
+
+                @for (integrante of integrantes; track integrante.nombre) {
+
+                    <article class="team-member">
 
 
-                        <!--
-                            ==================================
-                            FOTOGRAFÍA
-                            ==================================
-
-                            Este contenedor mantiene todas
-                            las fotografías con el mismo tamaño,
-                            aunque los archivos originales tengan
-                            proporciones diferentes.
-                        -->
+                        <!-- FOTO -->
                         <div class="team-photo-container">
 
-                            <!--
-                                [src]:
-                                es Property Binding de Angular.
-
-                                Significa que el valor de src
-                                no está escrito directamente aquí.
-
-                                Angular obtiene la ruta desde:
-
-                                integrante.imagen
-                            -->
                             <img
                                 [src]="integrante.imagen"
                                 [alt]="'Fotografía de ' + integrante.nombre"
@@ -177,40 +123,49 @@
                         </div>
 
 
+                        <!-- NOMBRE -->
+                        <h3 class="team-name">
+                            {{ integrante.nombre }}
+                        </h3>
+
+
+                        <!-- ROL -->
+                        <p class="team-role">
+                            {{ integrante.rol }}
+                        </p>
+
+
                         <!--
-                            ==================================
-                            INFORMACIÓN
-                            ==================================
+                            LINKEDIN
+
+                            Solamente aparece cuando la integrante
+                            tiene una URL guardada.
+
+                            Si linkedin = '',
+                            Angular no muestra nada.
                         -->
-                        <div class="team-info">
+                        @if (integrante.linkedin) {
 
+                            <a
+                                [href]="integrante.linkedin"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="team-linkedin"
+                                [attr.aria-label]="'LinkedIn de ' + integrante.nombre"
+                            >
+                                LinkedIn
+                                <span aria-hidden="true">↗</span>
+                            </a>
 
-                            <!--
-                                {{ }}:
-                                esto se llama interpolación.
+                        }
 
-                                Angular sustituye esta expresión
-                                por el nombre correspondiente
-                                del arreglo de integrantes.
-                            -->
-                            <h3 class="team-name">
-                                {{ integrante.nombre }}
-                            </h3>
-
-
-                            <!-- Rol dentro de la comunidad -->
-                            <p class="team-role">
-                                {{ integrante.rol }}
-                            </p>
-
-
-                        </div>
 
                     </article>
 
-                </div>
+                }
 
-            }
+            </div>
+
 
         </div>
 

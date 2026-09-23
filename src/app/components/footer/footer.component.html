@@ -3,13 +3,15 @@
     FOOTER
     ==========================================
 
-    El Footer cierra la página y cumple cuatro funciones:
+    El footer utiliza una composición horizontal
+    y compacta, similar al Navbar.
 
-    1. Reforzar la identidad de k’ak’b’e.lab.
-    2. Ofrecer navegación secundaria.
-    3. Facilitar acceso a redes sociales.
-    4. Mostrar discretamente el crédito
-       de diseño y desarrollo web.
+    En escritorio tendremos:
+
+    MARCA | NAVEGACIÓN | REDES
+
+    Debajo dejamos únicamente:
+    copyright | crédito de desarrollo
 -->
 <footer class="footer">
 
@@ -18,198 +20,135 @@
 
         <!--
             ==========================================
-            CONTENIDO PRINCIPAL
+            FILA PRINCIPAL
             ==========================================
-
-            row:
-            crea una fila con Bootstrap.
-
-            gy-4:
-            agrega espacio vertical cuando las columnas
-            se colocan una debajo de otra en móvil.
-
-            align-items-center:
-            centra verticalmente las columnas.
         -->
-        <div class="row gy-4 align-items-center">
+        <div class="footer-main">
 
 
             <!--
                 ======================================
                 MARCA
                 ======================================
-
-                En escritorio ocupa 4 de las
-                12 columnas de Bootstrap.
             -->
-            <div class="col-lg-4">
+            <a
+                href="#inicio"
+                class="footer-brand"
+                aria-label="Ir al inicio de k'ak'b'e.lab"
+            >
 
-                <a
-                    href="#"
-                    class="footer-brand"
-                    aria-label="Ir al inicio de k'ak'b'e.lab"
+                <img
+                    src="assets/images/logo-kakbe.png"
+                    alt="Logo de k'ak'b'e.lab"
+                    class="footer-logo"
                 >
 
-                    <!--
-                        Reutilizamos el logo que ya tenemos
-                        guardado dentro de assets.
-                    -->
-                    <img
-                        src="assets/images/logo-kakbe.png"
-                        alt="Logo de k'ak'b'e.lab"
-                        class="footer-logo"
-                    >
+
+                <span class="footer-brand-name">
+
+                    <span class="footer-kakbe">
+                        k’ak’b’e
+                    </span><span class="footer-lab">.lab</span>
+
+                </span>
+
+            </a>
 
 
-                    <!-- Nombre de la comunidad -->
-                    <span class="footer-brand-name">
+            <!--
+                ======================================
+                NAVEGACIÓN
+                ======================================
+            -->
+            <nav
+                class="footer-navigation"
+                aria-label="Navegación del pie de página"
+            >
 
-                        <span class="footer-kakbe">
-                            k’ak’b’e
-                        </span>
-
-                        <span class="footer-lab">
-                            .lab
-                        </span>
-
-                    </span>
-
+                <a href="#inicio">
+                    Inicio
                 </a>
 
+                <a href="#proposito">
+                    Propósito
+                </a>
 
-                <!--
-                    Una frase muy corta que resume
-                    la identidad de la comunidad.
-                -->
-                <p class="footer-tagline">
-                    Tecnología · Comunidad · Oportunidades
-                </p>
+                <a href="#equipo">
+                    Equipo
+                </a>
 
-            </div>
+                <a href="#experiencias">
+                    Experiencias
+                </a>
+
+                <a href="#colabora">
+                    Colabora
+                </a>
+
+                <a href="#contacto">
+                    Contacto
+                </a>
+
+            </nav>
 
 
             <!--
                 ======================================
-                NAVEGACIÓN SECUNDARIA
+                RED SOCIAL
                 ======================================
 
-                En escritorio ocupa 5 columnas.
-            -->
-            <div class="col-lg-5">
+                La URL debe escribirse directamente
+                dentro de href.
 
-                <nav
-                    class="footer-navigation"
-                    aria-label="Navegación del pie de página"
+                No utilizamos sintaxis Markdown.
+            -->
+            <div class="footer-social">
+
+                <a
+                    href="https://www.instagram.com/kakbe.lab?stkn=ZDNlZDc0MzIxNw=="
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram de k'ak'b'e.lab"
                 >
-
-                    <a href="#">
-                        Inicio
-                    </a>
-
-                    <a href="#nosotras">
-                        Nosotras
-                    </a>
-
-                    <a href="#proposito">
-                        Propósito
-                    </a>
-
-                    <a href="#equipo">
-                        Equipo
-                    </a>
-
-                    <a href="#colabora">
-                        Colabora
-                    </a>
-
-                    <a href="#contacto">
-                        Contacto
-                    </a>
-
-                </nav>
+                    Instagram ↗
+                </a>
 
             </div>
 
-
-            <!--
-                ======================================
-                REDES
-                ======================================
-
-                Por ahora dejamos Instagram.
-
-                Si posteriormente crean LinkedIn,
-                TikTok u otra red, podemos agregarla aquí.
-            -->
-            <div class="col-lg-3">
-
-                <div class="footer-social">
-
-                    <span class="footer-social-label">
-                        Síguenos
-                    </span>
-
-
-                    <!--
-                        REEMPLAZAR:
-                        coloca aquí la URL real del
-                        Instagram de k’ak’b’e.lab.
-                    -->
-                    <a
-                        href="[REEMPLAZAR: URL DE INSTAGRAM]"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Instagram ↗
-                    </a>
-
-                </div>
-
-            </div>
 
         </div>
 
 
         <!--
-            Línea que separa el contenido principal
-            de la información legal y los créditos.
+            Línea divisoria.
         -->
         <div class="footer-divider"></div>
 
 
         <!--
             ==========================================
-            PARTE INFERIOR
+            FILA INFERIOR
             ==========================================
         -->
         <div class="footer-bottom">
 
 
-            <!-- Derechos / identidad -->
             <p class="footer-copyright">
                 © 2026 k’ak’b’e.lab · Todos los derechos reservados.
             </p>
 
 
-            <!--
-                ======================================
-                CRÉDITO DE DESARROLLO
-                ======================================
-
-                Este crédito se mantiene pequeño y discreto.
-
-                La protagonista de la página sigue siendo
-                k’ak’b’e.lab.
-
-                REEMPLAZAR:
-                coloca aquí la URL de tu portafolio.
-            -->
             <p class="footer-credit">
 
                 Diseño y desarrollo web por
 
+                <!--
+                    IMPORTANTE:
+                    aquí coloca posteriormente la URL
+                    real de tu portafolio.
+                -->
                 <a
-                    href="[REEMPLAZAR: URL DE TU PORTAFOLIO]"
+                    href="#"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
@@ -218,7 +157,9 @@
 
             </p>
 
+
         </div>
+
 
     </div>
 

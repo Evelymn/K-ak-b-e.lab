@@ -11,7 +11,7 @@
     evita que k’ak’b’e.lab se divida en dos líneas.
 */
 .brand-name {
-    font-size: 1.70rem;
+    font-size: 1.80rem;
     font-weight: 600;
     white-space: nowrap;
 }
@@ -68,4 +68,104 @@ header{
     color: #294B52;
     font-weight: 600
     ;
+}
+.navbar-description {
+    display: block;
+
+    color: #294B52;
+
+    font-weight: 600;
+    font-size: 0.60rem;
+
+    margin-top: 0.1rem;
+
+    white-space: nowrap;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+/*
+    ==========================================
+    NAVBAR RESPONSIVE
+    TABLET Y CELULAR
+    ==========================================
+
+    Bootstrap cambia al menú hamburguesa por
+    debajo de 992px cuando usamos:
+
+    navbar-expand-lg
+*/
+@media (max-width: 991.98px) {
+
+    /*
+        El contenedor del navbar nos servirá
+        como referencia para posicionar el menú.
+    */
+    .navbar {
+        position: relative;
+    }
+
+
+    /*
+        ======================================
+        MENÚ DESPLEGABLE
+        ======================================
+
+        Cuando abrimos el botón hamburguesa,
+        colocamos las opciones hacia la derecha.
+    */
+    .navbar-collapse {
+        width: 100%;
+
+        padding: 1.5rem 0 1rem;
+    }
+
+
+    /*
+        ======================================
+        LISTA DE OPCIONES
+        ======================================
+
+        align-items: flex-end:
+        mueve los elementos hacia la derecha.
+
+        gap:
+        controlamos nosotros la separación.
+    */
+    .navbar-nav {
+        align-items: flex-end;
+
+        gap: 0.35rem !important;
+
+        width: 100%;
+    }
+
+
+    /*
+        Cada elemento se alinea a la derecha.
+    */
+    .nav-item {
+        text-align: right;
+    }
+
+
+    /*
+        ======================================
+        LINKS
+        ======================================
+
+        Reducimos el espacio enorme que actualmente
+        aparece entre una opción y otra.
+    */
+    .nav-link {
+        display: inline-block;
+
+        padding: 0.55rem 0.75rem !important;
+
+        text-align: right;
+    }
+
 }

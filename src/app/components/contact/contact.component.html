@@ -3,30 +3,41 @@
     SECCIÓN: CONTACTO
     ==========================================
 
-    Esta sección tiene una función muy importante:
+    Esta sección permite que personas,
+    empresas, instituciones y organizaciones
+    puedan comunicarse con k’ak’b’e.lab.
 
-    convertir el interés de una visitante,
-    estudiante, profesional, empresa u organización
-    en una forma concreta de comunicación.
+    IMPORTANTE EN ANGULAR:
 
-    id="contacto":
-    permite llegar hasta esta sección utilizando:
+    El carácter @ puede ser interpretado por
+    Angular como parte de su sintaxis moderna.
 
-    href="#contacto"
+    Por eso, cuando necesitamos MOSTRAR un @
+    dentro del contenido HTML utilizamos:
+
+    &#64;
+
+    El navegador lo mostrará normalmente como @.
 -->
 <section class="contact" id="contacto">
 
     <div class="container">
 
         <!--
-            row:
-            crea una fila utilizando Bootstrap.
+            ==========================================
+            CONTENIDO PRINCIPAL
+            ==========================================
 
-            g-5:
-            agrega espacio entre ambas columnas.
+            En escritorio tendremos dos columnas:
 
-            align-items-center:
-            centra verticalmente el contenido.
+            IZQUIERDA:
+            invitación a contactar.
+
+            DERECHA:
+            canales de comunicación.
+
+            En dispositivos pequeños Bootstrap
+            colocará una columna debajo de la otra.
         -->
         <div class="row g-5 align-items-center">
 
@@ -35,29 +46,39 @@
                 ======================================
                 COLUMNA IZQUIERDA
                 ======================================
-
-                En pantallas grandes ocupa 6 de las
-                12 columnas disponibles.
             -->
             <div class="col-lg-6">
 
+                <!-- Etiqueta de la sección -->
                 <span class="contact-label">
                     CONTACTO
                 </span>
 
 
+                <!-- Título principal -->
                 <h2 class="contact-title">
+
                     ¿Quieres conectar
-                    <span>con nosotras?</span>
+
+                    <span>
+                        con nosotras?
+                    </span>
+
                 </h2>
 
 
+                <!--
+                    Explicamos brevemente por qué
+                    alguien podría contactarnos.
+                -->
                 <p class="contact-description">
+
                     Si quieres conocer nuestra comunidad,
                     compartir una oportunidad, proponer una
                     colaboración o simplemente conversar sobre
                     lo que estamos construyendo, nos encantará
                     escucharte.
+
                 </p>
 
             </div>
@@ -68,8 +89,11 @@
                 COLUMNA DERECHA
                 ======================================
 
-                Aquí mostramos los canales reales
-                disponibles para comunicarse.
+                Contiene:
+
+                - Instagram
+                - correo
+                - WhatsApp
             -->
             <div class="col-lg-6">
 
@@ -81,8 +105,22 @@
                         INSTAGRAM
                         ==================================
 
-                        Posteriormente reemplazaremos
-                        los datos temporales por los reales.
+                        target="_blank":
+                        abre Instagram en otra pestaña.
+
+                        rel="noopener noreferrer":
+                        es una medida de seguridad recomendada
+                        para enlaces externos.
+
+                        IMPORTANTE:
+
+                        Para mostrar:
+
+                        @kakbe.lab
+
+                        escribimos:
+
+                        &#64;kakbe.lab
                     -->
                     <div class="contact-item">
 
@@ -90,12 +128,16 @@
                             Instagram
                         </span>
 
+
                         <a
-                            href="#"
+                            href="https://www.instagram.com/kakbe.lab?stkn=ZDNlZDc0MzIxNw=="
+                            target="_blank"
+                            rel="noopener noreferrer"
                             class="contact-link"
-                            aria-label="Instagram de k'ak'b'e.lab"
+                            aria-label="Abrir Instagram de k'ak'b'e.lab"
                         >
-                            [REEMPLAZAR: Instagram]
+                            &#64;kakbe.lab
+                            <span aria-hidden="true">↗</span>
                         </a>
 
                     </div>
@@ -107,8 +149,18 @@
                         ==================================
 
                         mailto:
-                        permite abrir directamente la
-                        aplicación de correo del usuario.
+                        permite abrir la aplicación de
+                        correo del visitante.
+
+                        En href podemos mantener la dirección.
+
+                        Para MOSTRAR el correo escribimos:
+
+                        nebulinas&#64;yahoo.com
+
+                        El navegador mostrará:
+
+                        nebulinas@yahoo.com
                     -->
                     <div class="contact-item">
 
@@ -116,11 +168,13 @@
                             Correo
                         </span>
 
+
                         <a
-                            href="mailto:correo@ejemplo.com"
+                            href="mailto:nebulinas@yahoo.com"
                             class="contact-link"
+                            aria-label="Enviar correo a k'ak'b'e.lab"
                         >
-                            [REEMPLAZAR: correo]
+                            nebulinas&#64;yahoo.com
                         </a>
 
                     </div>
@@ -128,26 +182,40 @@
 
                     <!--
                         ==================================
-                        CONTACTO / WHATSAPP
+                        WHATSAPP
                         ==================================
 
-                        Dejamos este elemento preparado.
+                        Número mostrado:
 
-                        Si finalmente no quieren publicar
-                        un número, podemos eliminarlo sin
-                        afectar el resto de la sección.
+                        +502 4087 4610
+
+                        Para crear un enlace de WhatsApp
+                        usamos el número completo sin:
+
+                        - signo +
+                        - espacios
+                        - guiones
+
+                        Resultado:
+
+                        50240874610
                     -->
                     <div class="contact-item">
 
                         <span class="contact-item-label">
-                            Contacto
+                            WhatsApp
                         </span>
 
+
                         <a
-                            href="#"
+                            href="https://wa.me/50240874610"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             class="contact-link"
+                            aria-label="Contactar a k'ak'b'e.lab por WhatsApp"
                         >
-                            [REEMPLAZAR: teléfono o WhatsApp]
+                            +502 4087 4610
+                            <span aria-hidden="true">↗</span>
                         </a>
 
                     </div>
@@ -156,6 +224,7 @@
                 </div>
 
             </div>
+
 
         </div>
 

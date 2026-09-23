@@ -6,8 +6,15 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 // Importamos HeroComponent para poder mostrar
 // la sección principal de presentación.
 import { HeroComponent } from './components/hero/hero.component';
-import { AboutComponent } from './components/about/about.component';
+// import { AboutComponent } from './components/about/about.component';
+/*
+    ExperiencesComponent muestra experiencias reales
+    de k’ak’b’e.lab.
 
+    Aquí podremos documentar participaciones,
+    eventos, proyectos y otros hitos de la comunidad.
+*/
+import { ExperiencesComponent } from './components/experiences/experiences.component';
 // Importamos TeamComponent para poder mostrar
 // la sección de integrantes de k’ak’b’e.lab.
 import { TeamComponent } from './components/team/team.component';
@@ -48,12 +55,13 @@ import { FooterComponent } from './components/footer/footer.component';
  imports: [
     NavbarComponent,
     HeroComponent,
-    AboutComponent,
+    // AboutComponent,
     TeamComponent,
     PurposeComponent,
     CollaborationComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    ExperiencesComponent
 ],
 
 

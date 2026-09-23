@@ -1,154 +1,453 @@
-<!--
-    ==========================================
-    NUESTRO PROPÓSITO
-    ==========================================
+  <!--
+      ==========================================
+      SECCIÓN: NUESTRO PROPÓSITO
+      ==========================================
 
-    Esta sección explica POR QUÉ existe k’ak’b’e.lab.
+      Esta sección explica la identidad y dirección
+      de k’ak’b’e.lab.
 
-    No mostramos actividades realizadas porque
-    la comunidad todavía está comenzando.
+      Aquí presentamos:
 
-    En cambio, presentamos claramente aquello
-    que queremos construir y aportar.
--->
-<section class="purpose" id="proposito">
+      - nuestro propósito
+      - nuestra misión
+      - nuestra visión
+      - nuestros valores
 
-    <div class="container">
+      id="proposito":
+      permite conectar esta sección con el Navbar
+      mediante:
 
+      href="#proposito"
+  -->
+  <section class="purpose" id="proposito">
 
-        <!--
-            ENCABEZADO DE LA SECCIÓN
-
-            mx-auto:
-            mantiene este bloque centrado.
-
-            text-center:
-            centra el contenido visualmente.
-        -->
-        <div class="purpose-intro text-center mx-auto">
-
-            <span class="purpose-label">
-                NUESTRO PROPÓSITO
-            </span>
-
-            <h2 class="purpose-title">
-                Tecnología que
-                <span>abre caminos.</span>
-            </h2>
-
-            <p class="purpose-description">
-                Creemos que acercarse a la tecnología puede abrir
-                nuevas formas de aprender, crear y descubrir
-                oportunidades.
-            </p>
-
-            <p class="purpose-description">
-                k’ak’b’e.lab nace con el propósito de construir una
-                comunidad donde niñas y jóvenes puedan sentirse
-                acompañadas mientras exploran el mundo de la tecnología.
-            </p>
-
-        </div>
+      <!--
+          container:
+          mantiene el contenido centrado y evita
+          que llegue hasta los extremos de la pantalla.
+      -->
+      <div class="container">
 
 
-        <!--
-            ==========================================
-            TRES PILARES DEL PROPÓSITO
-            ==========================================
+          <!--
+              ==========================================
+              PARTE SUPERIOR
+              ==========================================
 
-            Bootstrap divide su Grid en 12 columnas.
+              Creamos dos columnas:
 
-            col-lg-4:
-            cada elemento ocupa 4 columnas.
+              IZQUIERDA:
+              mensaje principal de la comunidad.
 
-            4 + 4 + 4 = 12
+              DERECHA:
+              fotografía real del equipo.
 
-            Por eso en computadora tendremos
-            tres elementos en una sola fila.
+              row:
+              crea una fila utilizando Bootstrap.
 
-            En pantallas pequeñas se acomodarán
-            uno debajo del otro.
-        -->
-        <div class="row g-4 mt-5">
+              align-items-center:
+              centra verticalmente ambas columnas.
 
-
-            <!-- ACERCAR -->
-            <div class="col-lg-4">
-
-                <article class="purpose-item">
-
-                    <!--
-                        El número ayuda a crear una composición
-                        visual más tecnológica sin depender
-                        todavía de una librería de iconos.
-                    -->
-                    <span class="purpose-number">
-                        01
-                    </span>
-
-                    <h3>
-                        Acercar
-                    </h3>
-
-                    <p>
-                        Hacer que la tecnología se sienta más
-                        cercana, accesible y posible para niñas
-                        y jóvenes.
-                    </p>
-
-                </article>
-
-            </div>
+              g-5:
+              agrega separación entre ambas columnas.
+          -->
+          <div class="row align-items-center g-5 purpose-main">
 
 
-            <!-- ACOMPAÑAR -->
-            <div class="col-lg-4">
+              <!--
+                  ======================================
+                  COLUMNA IZQUIERDA
+                  ======================================
 
-                <article class="purpose-item">
+                  col-lg-6:
+                  en pantallas grandes ocupa 6 de las
+                  12 columnas disponibles = 50%.
 
-                    <span class="purpose-number">
-                        02
-                    </span>
+                  En pantallas pequeñas Bootstrap
+                  automáticamente utilizará todo el ancho.
+              -->
+              <div class="col-lg-6">
 
-                    <h3>
-                        Acompañar
-                    </h3>
-
-                    <p>
-                        Construir un espacio donde podamos aprender,
-                        compartir experiencias y crecer acompañadas.
-                    </p>
-
-                </article>
-
-            </div>
+                  <div class="purpose-content">
 
 
-            <!-- CONECTAR -->
-            <div class="col-lg-4">
-
-                <article class="purpose-item">
-
-                    <span class="purpose-number">
-                        03
-                    </span>
-
-                    <h3>
-                        Conectar
-                    </h3>
-
-                    <p>
-                        Acercar personas, conocimiento y oportunidades
-                        que puedan inspirar nuevos caminos en tecnología.
-                    </p>
-
-                </article>
-
-            </div>
+                      <!--
+                          Pequeña etiqueta que identifica
+                          rápidamente esta sección.
+                      -->
+                      <span class="purpose-label">
+                          NUESTRO PROPÓSITO
+                      </span>
 
 
-        </div>
+                      <!--
+                          ==================================
+                          TÍTULO PRINCIPAL
+                          ==================================
 
-    </div>
+                          Utilizamos un span para poder
+                          darle violeta solamente a:
 
-</section>
+                          "abre caminos."
+                      -->
+                      <h2 class="purpose-title">
+
+                          Tecnología que
+
+                          <span>
+                              abre caminos.
+                          </span>
+
+                      </h2>
+
+
+                      <!--
+                          Primer mensaje.
+
+                          Resume de forma breve nuestra
+                          relación con la tecnología.
+                      -->
+                      <p class="purpose-lead">
+
+                          Creemos que acercarse a la tecnología
+                          puede abrir nuevas formas de aprender,
+                          crear y descubrir oportunidades.
+
+                      </p>
+
+
+                      <!--
+                          Segundo mensaje.
+
+                          Explica qué tipo de comunidad
+                          queremos construir.
+                      -->
+                      <p class="purpose-description">
+
+                          k’ak’b’e.lab nace con el propósito de
+                          construir una comunidad donde niñas y
+                          jóvenes puedan sentirse acompañadas
+                          mientras exploran el mundo de la tecnología.
+
+                      </p>
+
+
+                  </div>
+
+              </div>
+
+
+              <!--
+                  ======================================
+                  COLUMNA DERECHA: FOTOGRAFÍA
+                  ======================================
+
+                  Utilizamos una fotografía real porque
+                  representa mejor el trabajo, aprendizaje
+                  y colaboración de la comunidad.
+
+                  col-lg-6:
+                  ocupa la otra mitad de la fila.
+              -->
+              <div class="col-lg-6">
+
+                  <div class="purpose-photo-container">
+
+
+                      <!--
+                          IMPORTANTE:
+
+                          Cambia el nombre del archivo si
+                          guardaste la fotografía con otro nombre.
+
+                          Ruta esperada:
+
+                          src/assets/equipo/proposito-hackathon.jpg
+                      -->
+                      <img
+                          src="assets/equipo/works.jpg"
+                          alt="Integrantes de k'ak'b'e.lab colaborando durante una actividad tecnológica"
+                          class="purpose-photo"
+                      >
+
+
+                  </div>
+
+              </div>
+
+
+          </div>
+
+
+          <!--
+              ==========================================
+              MISIÓN · VISIÓN · VALORES
+              ==========================================
+
+              Tenemos tres columnas.
+
+              Bootstrap utiliza un sistema de 12 columnas.
+
+              col-lg-4 significa:
+
+              4 + 4 + 4 = 12
+
+              Por eso las tres tarjetas aparecen
+              en una misma fila en computadora.
+
+              En tablet y celular se colocarán
+              automáticamente una debajo de otra.
+          -->
+          <div class="row g-4 purpose-principles">
+
+
+              <!--
+                  ======================================
+                  MISIÓN
+                  ======================================
+              -->
+              <div class="col-lg-4">
+
+                  <article class="purpose-card">
+
+
+                      <!--
+                          Pequeño elemento gráfico.
+
+                          No necesitamos instalar una
+                          librería adicional de iconos.
+                      -->
+                      <div class="purpose-icon">
+                          &lt;/&gt;
+                      </div>
+
+
+                      <h3>
+                          Misión
+                      </h3>
+
+
+                      <!-- Línea decorativa turquesa -->
+                      <div class="purpose-line"></div>
+
+
+                      <!--
+                          IMPORTANTE:
+
+                          Este texto funciona como borrador.
+
+                          La misión institucional definitiva
+                          debería ser validada por el equipo
+                          de k’ak’b’e.lab.
+                      -->
+                      <p>
+
+                          Acercar la tecnología a niñas y jóvenes
+                          mediante espacios de aprendizaje,
+                          acompañamiento y colaboración que les
+                          permitan explorar, crear y desarrollar
+                          nuevas habilidades.
+
+                      </p>
+
+
+                  </article>
+
+              </div>
+
+
+              <!--
+                  ======================================
+                  VISIÓN
+                  ======================================
+              -->
+              <div class="col-lg-4">
+
+                  <article class="purpose-card purpose-card-vision">
+
+
+                      <!--
+                          En Visión utilizamos violeta para
+                          introducir una pequeña variación
+                          dentro de la composición.
+                      -->
+                      <div class="purpose-icon purpose-icon-purple">
+                          ◇
+                      </div>
+
+
+                      <h3>
+                          Visión
+                      </h3>
+
+
+                      <!-- Línea violeta -->
+                      <div class="purpose-line purpose-line-purple"></div>
+
+
+                      <!--
+                          También es un borrador que puede
+                          modificarse posteriormente.
+                      -->
+                      <p>
+
+                          Construir una comunidad que conecte
+                          a niñas y jóvenes con conocimiento,
+                          personas y oportunidades que impulsen
+                          su crecimiento y participación en
+                          tecnología.
+
+                      </p>
+
+
+                  </article>
+
+              </div>
+
+
+              <!--
+                  ======================================
+                  VALORES
+                  ======================================
+              -->
+              <div class="col-lg-4">
+
+                  <article class="purpose-card">
+
+
+                      <!-- Símbolo de comunidad -->
+                      <div class="purpose-icon">
+                          ♡
+                      </div>
+
+
+                      <h3>
+                          Valores
+                      </h3>
+
+
+                      <div class="purpose-line"></div>
+
+
+                      <!--
+                          ==================================
+                          LISTA DE VALORES
+                          ==================================
+
+                          Cada valor contiene:
+
+                          - nombre
+                          - explicación breve
+                      -->
+                      <div class="purpose-values">
+
+
+                          <!--
+                              COMUNIDAD
+                          -->
+                          <div class="purpose-value">
+
+                              <strong>
+                                  Comunidad
+                              </strong>
+
+                              <span>
+                                  Creemos en aprender
+                                  y crecer juntas.
+                              </span>
+
+                          </div>
+
+
+                          <!--
+                              CURIOSIDAD
+                          -->
+                          <div class="purpose-value">
+
+                              <strong>
+                                  Curiosidad
+                              </strong>
+
+                              <span>
+                                  Impulsamos la exploración,
+                                  las preguntas y las nuevas ideas.
+                              </span>
+
+                          </div>
+
+
+                          <!--
+                              INCLUSIÓN
+                          -->
+                          <div class="purpose-value">
+
+                              <strong>
+                                  Inclusión
+                              </strong>
+
+                              <span>
+                                  Promovemos espacios donde más
+                                  niñas y jóvenes puedan acercarse
+                                  a la tecnología.
+                              </span>
+
+                          </div>
+
+
+                          <!--
+                              COLABORACIÓN
+                          -->
+                          <div class="purpose-value">
+
+                              <strong>
+                                  Colaboración
+                              </strong>
+
+                              <span>
+                                  Compartimos conocimiento y
+                                  construimos oportunidades junto
+                                  a otras personas y organizaciones.
+                              </span>
+
+                          </div>
+
+
+                      </div>
+
+
+                  </article>
+
+              </div>
+
+
+          </div>
+
+
+            <!-- <!--
+                ==========================================
+                CIERRE DE LA SECCIÓN
+                ==========================================
+
+                Esta frase funciona como un pequeño
+                manifiesto visual.
+
+                La línea que aparece después ayuda
+                a cerrar gráficamente la sección.
+
+            <div class="purpose-footer">
+
+
+                <span>
+                    IDEAS DE HOY, UN FUTURO MÁS INCLUSIVO
+                </span>
+
+
+                <div class="purpose-footer-line"></div>
+
+
+            </div> -->
+
+
+      </div>
+
+  </section>

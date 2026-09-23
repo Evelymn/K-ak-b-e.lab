@@ -3,50 +3,55 @@
     SECCIÓN: NUESTRO PROPÓSITO
     ==========================================
 
-    Esta clase controla toda la sección.
+    Utilizamos el lavanda claro de la identidad
+    de k’ak’b’e.lab.
 
-    Usamos lavanda suave para diferenciarla
-    visualmente de las secciones anteriores
-    sin utilizar un color demasiado fuerte.
-
-    padding:
-    agrega espacio arriba y abajo.
+    Esto diferencia visualmente Purpose del Hero,
+    Team y Experiences.
 */
 .purpose {
     background-color: var(--kakbe-lavender);
-    padding: 6rem 0;
+
+    padding: 5rem 0;
 }
 
 
 /*
     ==========================================
-    INTRODUCCIÓN
+    PARTE PRINCIPAL
+    ==========================================
+
+    Contiene:
+
+    texto + fotografía
+
+    margin-bottom:
+    separa esta parte de Misión, Visión y Valores.
+*/
+.purpose-main {
+    margin-bottom: 4rem;
+}
+
+
+/*
+    ==========================================
+    CONTENIDO PRINCIPAL
     ==========================================
 
     max-width:
-    limita el ancho del texto para evitar
-    líneas demasiado largas.
-
-    margin: 0 auto:
-    centra horizontalmente el bloque.
+    evita que el texto sea demasiado ancho.
 */
-.purpose-intro {
-    max-width: 800px;
-    margin: 0 auto;
+.purpose-content {
+    max-width: 560px;
 }
 
 
 /*
     ==========================================
-    ETIQUETA "NUESTRO PROPÓSITO"
+    ETIQUETA
     ==========================================
 
-    Es el pequeño texto que aparece antes
-    del título principal.
-
-    letter-spacing:
-    separa ligeramente las letras y le da
-    una apariencia más de encabezado.
+    NUESTRO PROPÓSITO
 */
 .purpose-label {
     color: var(--kakbe-turquoise);
@@ -60,33 +65,29 @@
 
 /*
     ==========================================
-    TÍTULO PRINCIPAL
+    TÍTULO
     ==========================================
-
-    Ejemplo:
 
     Tecnología que abre caminos.
 */
 .purpose-title {
     color: var(--kakbe-dark);
 
-    font-size: 2.8rem;
+    font-size: 3rem;
     font-weight: 700;
 
-    line-height: 1.2;
+    line-height: 1.1;
 
-    margin: 0.8rem 0 1.5rem;
+    margin: 0.8rem 0 1.4rem;
 }
 
 
 /*
-    En nuestro HTML tenemos:
+    Destacamos:
 
-    Tecnología que
-    <span>abre caminos.</span>
+    abre caminos.
 
-    Este selector permite darle otro color
-    solamente a esa parte del título.
+    utilizando violeta.
 */
 .purpose-title span {
     color: var(--kakbe-purple);
@@ -95,106 +96,28 @@
 
 /*
     ==========================================
-    DESCRIPCIÓN PRINCIPAL
+    PRIMER PÁRRAFO
     ==========================================
 
-    line-height:
-    aumenta el espacio entre líneas para que
-    los párrafos sean más cómodos de leer.
+    Tiene un poco más de peso visual porque
+    resume el propósito de la comunidad.
+*/
+.purpose-lead {
+    color: var(--kakbe-dark);
+
+    font-size: 1.1rem;
+    line-height: 1.7;
+
+    margin-bottom: 1.2rem;
+}
+
+
+/*
+    ==========================================
+    SEGUNDO PÁRRAFO
+    ==========================================
 */
 .purpose-description {
-    color: var(--kakbe-dark);
-
-    font-size: 1.05rem;
-    line-height: 1.8;
-
-    margin-bottom: 0.8rem;
-}
-
-
-/*
-    ==========================================
-    CADA PILAR DEL PROPÓSITO
-    ==========================================
-
-    Aquí están:
-
-    01 Acercar
-    02 Acompañar
-    03 Conectar
-
-    IMPORTANTE:
-    No les ponemos una tarjeta blanca completa.
-
-    Queremos que esta sección tenga una apariencia
-    más abierta y diferente a Team.
-*/
-.purpose-item {
-    position: relative;
-
-    padding: 2rem 1.5rem;
-
-    /*
-        Esta línea superior funciona como
-        un pequeño detalle tecnológico.
-    */
-    border-top: 2px solid var(--kakbe-turquoise);
-
-    height: 100%;
-}
-
-
-/*
-    ==========================================
-    NÚMEROS 01 / 02 / 03
-    ==========================================
-
-    Los números sirven como elemento visual
-    y también ayudan a diferenciar cada idea.
-*/
-.purpose-number {
-    display: block;
-
-    color: var(--kakbe-turquoise);
-
-    font-size: 2.5rem;
-    font-weight: 700;
-
-    /*
-        Reducimos un poco la intensidad para que
-        el número acompañe al título sin dominarlo.
-    */
-    opacity: 0.65;
-
-    margin-bottom: 1rem;
-}
-
-
-/*
-    ==========================================
-    TÍTULOS DE LOS PILARES
-    ==========================================
-
-    Acercar
-    Acompañar
-    Conectar
-*/
-.purpose-item h3 {
-    color: var(--kakbe-dark);
-
-    font-size: 1.35rem;
-    font-weight: 700;
-
-    margin-bottom: 0.8rem;
-}
-
-
-/*
-    ==========================================
-    TEXTO DE LOS PILARES
-    ==========================================
-*/
-.purpose-item p {
     color: var(--kakbe-dark);
 
     font-size: 1rem;
@@ -206,67 +129,331 @@
 
 /*
     ==========================================
-    INTERACCIÓN CON EL MOUSE
+    FOTOGRAFÍA
     ==========================================
 
-    Cuando colocamos el mouse encima de uno
-    de los pilares, cambiamos la línea superior.
+    Creamos un formato horizontal para mostrar
+    la fotografía del equipo trabajando.
 
-    Esto agrega interacción sin utilizar
-    una animación exagerada.
+    overflow: hidden:
+    permite recortar la fotografía dentro
+    del contenedor.
+
+    border-radius:
+    suaviza las esquinas.
 */
-.purpose-item {
-    transition: border-color 0.3s ease;
+.purpose-photo-container {
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    box-shadow: 0 14px 35px rgba(41, 75, 82, 0.10);
 }
 
 
-.purpose-item:hover {
-    border-top-color: var(--kakbe-purple);
+/*
+    La fotografía llena todo el contenedor
+    sin deformarse.
+*/
+.purpose-photo {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    /*
+        Podemos modificar esta propiedad posteriormente
+        si queremos mover visualmente el encuadre.
+    */
+    object-position: center;
+
+    display: block;
 }
 
 
 /*
     ==========================================
-    RESPONSIVE - CELULARES
+    MISIÓN · VISIÓN · VALORES
     ==========================================
 
-    Esta regla se aplica únicamente cuando
-    la pantalla mide 767px o menos.
+    Separamos este bloque de la composición
+    principal.
+*/
+.purpose-principles {
+    margin-top: 0;
+}
+
+
+/*
+    ==========================================
+    TARJETAS
+    ==========================================
+
+    Utilizamos fondo blanco ligeramente translúcido
+    para mantener visible la suavidad del lavanda.
+
+    height: 100%:
+    hace que las tres tarjetas tengan la misma
+    altura dentro de la fila.
+*/
+.purpose-card {
+    background-color: rgba(255, 255, 255, 0.82);
+
+    border: 1px solid rgba(41, 75, 82, 0.08);
+
+    border-radius: 18px;
+
+    padding: 2rem;
+
+    height: 100%;
+
+    box-shadow: 0 8px 25px rgba(41, 75, 82, 0.05);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/*
+    Hover discreto.
+
+    La tarjeta se levanta ligeramente.
+*/
+.purpose-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 14px 30px rgba(41, 75, 82, 0.10);
+}
+
+
+/*
+    ==========================================
+    ICONOS / SÍMBOLOS
+    ==========================================
+
+    Creamos un pequeño bloque visual para
+    cada concepto.
+*/
+.purpose-icon {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 52px;
+    height: 52px;
+
+    background-color: var(--kakbe-mint);
+
+    color: var(--kakbe-turquoise);
+
+    border-radius: 14px;
+
+    font-size: 1.25rem;
+    font-weight: 700;
+
+    margin-bottom: 1.2rem;
+}
+
+
+/*
+    Visión utiliza violeta para introducir
+    una pequeña variación visual.
+*/
+.purpose-icon-purple {
+    background-color: rgba(121, 85, 220, 0.12);
+
+    color: var(--kakbe-purple);
+}
+
+
+/*
+    ==========================================
+    TÍTULOS DE LAS TARJETAS
+    ==========================================
+*/
+.purpose-card h3 {
+    color: var(--kakbe-dark);
+
+    font-size: 1.55rem;
+    font-weight: 700;
+
+    margin-bottom: 0.7rem;
+}
+
+
+/*
+    ==========================================
+    LÍNEA DECORATIVA
+    ==========================================
+
+    Es un detalle pequeño que conecta con
+    los colores de la identidad.
+*/
+.purpose-line {
+    width: 48px;
+    height: 2px;
+
+    background-color: var(--kakbe-turquoise);
+
+    margin-bottom: 1.3rem;
+}
+
+
+/*
+    La tarjeta de Visión utiliza violeta.
+*/
+.purpose-line-purple {
+    background-color: var(--kakbe-purple);
+}
+
+
+/*
+    ==========================================
+    TEXTO DE MISIÓN Y VISIÓN
+    ==========================================
+*/
+.purpose-card > p {
+    color: var(--kakbe-dark);
+
+    font-size: 0.95rem;
+    line-height: 1.7;
+
+    margin-bottom: 0;
+}
+
+
+/*
+    ==========================================
+    VALORES
+    ==========================================
+
+    Utilizamos grid para mantener una separación
+    uniforme entre los cuatro valores.
+*/
+.purpose-values {
+    display: grid;
+
+    gap: 1rem;
+}
+
+
+/*
+    Cada valor contiene:
+
+    título
+    descripción
+*/
+.purpose-value {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.15rem;
+}
+
+
+/*
+    Comunidad
+    Curiosidad
+    Inclusión
+    Colaboración
+*/
+.purpose-value strong {
+    color: var(--kakbe-dark);
+
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+
+/*
+    Descripción de cada valor.
+*/
+.purpose-value span {
+    color: var(--kakbe-dark);
+
+    font-size: 0.82rem;
+    line-height: 1.45;
+
+    opacity: 0.8;
+}
+
+
+/*
+    ==========================================
+    RESPONSIVE: TABLET / CELULAR
+    ==========================================
+*/
+@media (max-width: 991px) {
+
+    /*
+        Cuando las columnas pasan a estar
+        una debajo de otra, permitimos que
+        el texto utilice todo el ancho.
+    */
+    .purpose-content {
+        max-width: 100%;
+    }
+
+
+    /*
+        Reducimos ligeramente la separación
+        antes de las tarjetas.
+    */
+    .purpose-main {
+        margin-bottom: 3rem;
+    }
+
+}
+
+
+/*
+    ==========================================
+    RESPONSIVE: CELULARES
+    ==========================================
 */
 @media (max-width: 767px) {
 
     /*
-        Reducimos un poco el espacio vertical
-        porque en celular la pantalla es menor.
+        Reducimos el padding general.
     */
     .purpose {
-        padding: 4rem 0;
+        padding: 3.5rem 0;
     }
 
 
     /*
-        Reducimos el tamaño del título para
-        evitar que ocupe demasiadas líneas.
+        Título más pequeño.
     */
     .purpose-title {
-        font-size: 2.1rem;
+        font-size: 2.2rem;
     }
 
 
     /*
-        Damos espacio lateral a la introducción
-        para que el texto no toque los bordes.
+        En móvil utilizamos una proporción
+        ligeramente más cuadrada para que
+        la fotografía no quede demasiado baja.
     */
-    .purpose-intro {
-        padding: 0 1rem;
+    .purpose-photo-container {
+        aspect-ratio: 4 / 3;
+
+        border-radius: 16px;
     }
 
 
     /*
-        Los números no necesitan ser tan grandes
-        en una pantalla pequeña.
+        Reducimos ligeramente el espacio
+        interno de las tarjetas.
     */
-    .purpose-number {
-        font-size: 2rem;
+    .purpose-card {
+        padding: 1.5rem;
     }
+
 }

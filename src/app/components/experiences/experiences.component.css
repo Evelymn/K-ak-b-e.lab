@@ -1,0 +1,268 @@
+/*
+    ==========================================
+    SECCIÓN: EXPERIENCIAS
+    ==========================================
+
+    Utilizamos un fondo menta muy suave para
+    diferenciar esta sección de Team y Collaboration.
+
+    La fotografía será el elemento visual principal,
+    por eso evitamos llenar esta sección de tarjetas.
+*/
+.experiences {
+    background-color: var(--kakbe-mint);
+
+    padding: 5rem 0;
+}
+
+
+/*
+    ==========================================
+    ENCABEZADO
+    ==========================================
+
+    Lo alineamos a la izquierda para crear una
+    composición más editorial y diferenciar esta
+    sección de Purpose y Team.
+*/
+.experiences-intro {
+    max-width: 760px;
+
+    margin-bottom: 3rem;
+}
+
+
+/*
+    Pequeña etiqueta:
+    NUESTRAS EXPERIENCIAS
+*/
+.experiences-label {
+    color: var(--kakbe-turquoise);
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    letter-spacing: 0.15rem;
+}
+
+
+/*
+    ==========================================
+    TÍTULO
+    ==========================================
+*/
+.experiences-title {
+    color: var(--kakbe-dark);
+
+    font-size: 2.7rem;
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    margin: 0.8rem 0 1.2rem;
+}
+
+
+/*
+    Destacamos una parte del mensaje
+    utilizando violeta.
+*/
+.experiences-title span {
+    color: var(--kakbe-purple);
+}
+
+
+/*
+    ==========================================
+    DESCRIPCIÓN
+    ==========================================
+*/
+.experiences-description {
+    color: var(--kakbe-dark);
+
+    font-size: 1.05rem;
+    line-height: 1.7;
+
+    margin-bottom: 0;
+}
+
+
+/*
+    ==========================================
+    EXPERIENCIA DESTACADA
+    ==========================================
+
+    No utilizamos una tarjeta alrededor de todo.
+
+    La fotografía y el texto forman una única
+    composición abierta.
+*/
+.experience-feature {
+    margin-top: 0;
+}
+
+
+/*
+    ==========================================
+    FOTOGRAFÍA
+    ==========================================
+
+    aspect-ratio:
+    proporciona un formato horizontal consistente.
+
+    overflow:
+    permite recortar la fotografía sin deformarla.
+*/
+.experience-photo-container {
+    width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    box-shadow: 0 12px 35px rgba(41, 75, 82, 0.10);
+}
+
+
+/*
+    object-fit: cover:
+    llena el contenedor manteniendo las
+    proporciones originales de la fotografía.
+*/
+.experience-photo {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    /*
+        La fotografía original tiene bastante
+        espacio en la parte superior.
+
+        Con center mantenemos inicialmente
+        al grupo como punto principal.
+
+        Podemos ajustar esto después si hace falta.
+    */
+    object-position: center;
+
+    display: block;
+}
+
+
+/*
+    ==========================================
+    INFORMACIÓN
+    ==========================================
+*/
+.experience-content {
+    max-width: 450px;
+}
+
+
+/*
+    Etiqueta "EXPERIENCIA".
+*/
+.experience-category {
+    color: var(--kakbe-purple);
+
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    letter-spacing: 0.12rem;
+}
+
+
+/*
+    Hackathon Nacional 2026
+*/
+.experience-name {
+    color: var(--kakbe-dark);
+
+    font-size: 2rem;
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    margin: 0.7rem 0 0.4rem;
+}
+
+
+/*
+    Nombre específico del evento.
+*/
+.experience-subtitle {
+    color: var(--kakbe-dark);
+
+    font-size: 1.05rem;
+    font-weight: 600;
+
+    margin-bottom: 0.5rem;
+}
+
+
+/*
+    Fecha.
+*/
+.experience-date {
+    color: var(--kakbe-turquoise);
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    margin-bottom: 1.4rem;
+}
+
+
+/*
+    Descripción de la experiencia.
+*/
+.experience-text {
+    color: var(--kakbe-dark);
+
+    font-size: 1rem;
+    line-height: 1.7;
+
+    margin-bottom: 0;
+}
+
+
+/*
+    ==========================================
+    RESPONSIVE
+    ==========================================
+*/
+@media (max-width: 767px) {
+
+    .experiences {
+        padding: 3.5rem 0;
+    }
+
+
+    .experiences-intro {
+        margin-bottom: 2rem;
+    }
+
+
+    .experiences-title {
+        font-size: 2.1rem;
+    }
+
+
+    .experience-name {
+        font-size: 1.6rem;
+    }
+
+
+    /*
+        En celular usamos una fotografía un poco
+        menos panorámica para aprovechar mejor
+        el espacio vertical disponible.
+    */
+    .experience-photo-container {
+        aspect-ratio: 4 / 3;
+    }
+
+}

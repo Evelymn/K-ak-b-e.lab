@@ -1,65 +1,65 @@
 import { Component } from '@angular/core';
 
 @Component({
-
-    // Este es el nombre que utilizamos en HTML:
-    //
-    // <app-team></app-team>
     selector: 'app-team',
-
-    // Indica que este componente funciona de forma
-    // independiente y puede importarse directamente
-    // dentro de otros componentes standalone.
     standalone: true,
-
-    // TeamComponent por ahora no necesita importar
-    // otros componentes, directivas o pipes.
     imports: [],
-
-    // HTML que pertenece a este componente.
     templateUrl: './team.component.html',
-
-    // CSS que pertenece a este componente.
     styleUrl: './team.component.css'
-
 })
+
 export class TeamComponent {
 
     /*
-        Aquí guardamos la información de las integrantes.
+        ==========================================
+        INTEGRANTES
+        ==========================================
 
-        Angular recorrerá este arreglo desde el HTML
-        utilizando @for.
+        Cada objeto contiene únicamente información
+        que cambia entre una integrante y otra.
+
+        La carrera y la universidad NO se repiten aquí
+        porque todas comparten esa información.
     */
     integrantes = [
+
         {
-            nombre: 'Habil',
+            nombre: 'Habil Xol Par',
             rol: 'Coordinación general',
-            imagen: 'assets/equipo/integrante-1.jpeg'
+            imagen: 'assets/equipo/integrante-1.jpeg',
+            linkedin: ''
         },
 
         {
-            nombre: 'Nombre integrante 2',
+            nombre: 'Yoselin Amarilis López',
             rol: 'Comunicación y redes',
-            imagen: 'assets/equipo/integrante-2.jpeg'
+            imagen: 'assets/equipo/integrante-2.jpeg',
+            linkedin: ''
         },
 
         {
-            nombre: 'Nombre integrante 3',
+            nombre: 'Yaxchel Xol Par',
             rol: 'Talleres y contenido',
-            imagen: 'assets/equipo/integrante-3.jpeg'
+            imagen: 'assets/equipo/integrante-3.jpeg',
+            linkedin: ''
         },
 
         {
-            nombre: 'Nombre integrante 4',
+            nombre: 'Tatiana Ivonne López',
             rol: 'Diseño y experiencia',
-            imagen: 'assets/equipo/integrante-4.jpeg'
+            imagen: 'assets/equipo/integrante-4.jpeg',
+            linkedin: ''
         },
 
         {
-            nombre: 'Nombre integrante 5',
+            nombre: 'Evelyn Carolina Castro',
             rol: 'Tecnología y desarrollo',
-            imagen: 'assets/equipo/integrante-5.jpeg'
+            imagen: 'assets/equipo/integrante-5.jpg',
+
+            // LinkedIn real de Evelyn.
+            linkedin: 'https://www.linkedin.com/in/evelyn-castro-8b761722b'
         }
+
     ];
+
 }

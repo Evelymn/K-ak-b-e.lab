@@ -310,3 +310,111 @@
     }
 
 }
+
+/*
+    ==========================================
+    INTRODUCCIÓN CON FOTOGRAFÍA
+    ==========================================
+
+    Ahora la introducción utiliza una fotografía
+    real de la comunidad junto con nuestra historia.
+
+    max-width:
+    permite aprovechar mejor el espacio horizontal
+    porque ahora tenemos dos columnas.
+*/
+.about-intro {
+    max-width: 1150px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*
+    ==========================================
+    CONTENEDOR DE LA FOTOGRAFÍA
+    ==========================================
+
+    overflow: hidden:
+    evita que la fotografía sobresalga de
+    las esquinas redondeadas.
+
+    border-radius:
+    suaviza ligeramente las esquinas sin darle
+    apariencia de tarjeta.
+
+    aspect-ratio:
+    mantiene una proporción horizontal consistente.
+*/
+.about-photo-container {
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+}
+
+
+/*
+    ==========================================
+    FOTOGRAFÍA
+    ==========================================
+
+    object-fit: cover:
+    hace que la fotografía llene todo el espacio
+    sin deformarse.
+
+    Si sobra una parte de la imagen,
+    el navegador la recorta automáticamente.
+*/
+.about-photo {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    /*
+        Ajustaremos esta posición si necesitamos
+        controlar mejor qué parte de la fotografía
+        queda visible.
+    */
+    object-position: center;
+
+    display: block;
+}
+
+
+/*
+    ==========================================
+    CONTENIDO
+    ==========================================
+
+    En escritorio dejamos el texto alineado
+    hacia la izquierda.
+
+    Esto crea una composición más editorial
+    que el diseño anterior completamente centrado.
+*/
+.about-content {
+    text-align: left;
+}
+
+
+/*
+    Como ahora el texto está en una columna,
+    ya no necesitamos limitarlo y centrarlo
+    como en el diseño anterior.
+*/
+.about-description {
+    color: var(--kakbe-dark);
+
+    font-size: 1.05rem;
+    line-height: 1.7;
+
+    max-width: none;
+
+    margin: 0;
+}

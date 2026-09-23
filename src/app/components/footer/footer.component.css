@@ -1,187 +1,129 @@
-/*
+/* ==========================================
+   CONTENIDO PRINCIPAL DEL FOOTER
+   ========================================== */
+   /*
     ==========================================
     FOOTER
     ==========================================
 
-    Utilizamos un fondo muy oscuro para cerrar
-    visualmente la landing page.
-
-    Contacto utiliza nuestro azul petróleo.
-    El Footer será todavía un poco más oscuro,
-    creando una transición clara entre ambos.
+    Recuperamos el fondo azul petróleo oscuro
+    original del Footer.
 */
 .footer {
-    background-color: #1f383e;
+    background-color: #1f4147;
+    color: #ffffff;
 
-    color: var(--kakbe-white);
+    padding: 2.5rem 0 1.2rem;
+}
 
-    padding: 3.5rem 0 1.5rem;
+.footer-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 2rem;
 }
 
 
-/*
-    ==========================================
-    MARCA
-    ==========================================
+/* ==========================================
+   MARCA
+   ========================================== */
 
-    display: inline-flex:
-    coloca logo y nombre en una misma línea.
-
-    align-items:
-    los centra verticalmente.
-
-    gap:
-    crea espacio entre ambos.
-*/
 .footer-brand {
-    display: inline-flex;
-
+    display: flex;
     align-items: center;
 
-    gap: 0.75rem;
+    gap: 0.7rem;
+
+    flex-shrink: 0;
 
     text-decoration: none;
 }
 
 
-/*
-    Logo pequeño.
-
-    No queremos repetir el logo enorme
-    utilizado en otras partes de la página.
-*/
 .footer-logo {
-    width: 55px;
+    width: 52px;
     height: auto;
+
+    display: block;
 }
 
 
-/*
-    Nombre de la comunidad.
-*/
 .footer-brand-name {
-    font-size: 1.4rem;
-    font-weight: 600;
+    display: flex;
+    align-items: baseline;
+
+    font-size: 1.25rem;
+    font-weight: 700;
 
     white-space: nowrap;
 }
 
 
-/*
-    Primera parte del nombre.
-*/
 .footer-kakbe {
     color: var(--kakbe-white);
 }
 
 
-/*
-    .lab mantiene el turquesa característico
-    de la identidad.
-*/
 .footer-lab {
     color: var(--kakbe-turquoise);
 }
 
 
-/*
-    ==========================================
-    FRASE DE MARCA
-    ==========================================
-*/
-.footer-tagline {
-    color: rgba(255, 255, 255, 0.65);
+/* ==========================================
+   NAVEGACIÓN
+   ========================================== */
 
-    font-size: 0.85rem;
-
-    margin-top: 0.7rem;
-    margin-bottom: 0;
-}
-
-
-/*
-    ==========================================
-    NAVEGACIÓN
-    ==========================================
-
-    flex-wrap:
-    permite que los enlaces pasen a otra línea
-    si no existe suficiente espacio.
-*/
 .footer-navigation {
     display: flex;
+    align-items: center;
+    justify-content: center;
 
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 
-    gap: 0.8rem 1.4rem;
+    gap: 1.5rem;
 }
 
 
-/*
-    Enlaces de navegación.
-*/
 .footer-navigation a {
-    color: rgba(255, 255, 255, 0.78);
+    color: var(--kakbe-white);
 
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    font-weight: 500;
 
     text-decoration: none;
 
-    transition: color 0.3s ease;
+    white-space: nowrap;
+
+    transition: color 0.25s ease;
 }
 
 
-/*
-    Al pasar el mouse utilizamos turquesa.
-*/
 .footer-navigation a:hover {
     color: var(--kakbe-turquoise);
 }
 
 
-/*
-    ==========================================
-    REDES SOCIALES
-    ==========================================
-*/
+/* ==========================================
+   INSTAGRAM
+   ========================================== */
+
 .footer-social {
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    gap: 0.4rem;
+    flex-shrink: 0;
 }
 
 
-/*
-    Pequeña etiqueta "Síguenos".
-*/
-.footer-social-label {
-    color: rgba(255, 255, 255, 0.55);
-
-    font-size: 0.75rem;
-    font-weight: 700;
-
-    letter-spacing: 0.08rem;
-
-    text-transform: uppercase;
-}
-
-
-/*
-    Enlace hacia Instagram.
-*/
 .footer-social a {
     color: var(--kakbe-turquoise);
 
-    font-size: 0.95rem;
-    font-weight: 600;
+    font-size: 0.85rem;
+    font-weight: 700;
 
     text-decoration: none;
 
-    transition: color 0.3s ease;
+    white-space: nowrap;
+
+    transition: color 0.25s ease;
 }
 
 
@@ -190,90 +132,49 @@
 }
 
 
-/*
-    ==========================================
-    DIVISOR
-    ==========================================
+/* ==========================================
+   DIVISOR
+   ========================================== */
 
-    Línea muy suave que separa el contenido
-    principal de los créditos.
-*/
 .footer-divider {
+    width: 100%;
     height: 1px;
 
-    background-color: rgba(255, 255, 255, 0.12);
+    background-color: rgba(255, 255, 255, 0.14);
 
-    margin: 2.5rem 0 1.3rem;
+    margin: 1.5rem 0 1rem;
 }
 
 
-/*
-    ==========================================
-    PARTE INFERIOR
-    ==========================================
+/* ==========================================
+   PARTE INFERIOR
+   ========================================== */
 
-    display: flex:
-    coloca copyright y crédito en una línea.
-
-    justify-content: space-between:
-    envía uno hacia cada extremo.
-
-    flex-wrap:
-    permite que se acomoden correctamente
-    en pantallas pequeñas.
-*/
 .footer-bottom {
     display: flex;
-
+    align-items: center;
     justify-content: space-between;
 
-    align-items: center;
-
-    flex-wrap: wrap;
-
-    gap: 0.8rem;
+    gap: 2rem;
 }
 
 
-/*
-    Copyright.
-*/
-.footer-copyright {
-    color: rgba(255, 255, 255, 0.55);
-
-    font-size: 0.78rem;
-
-    margin-bottom: 0;
-}
-
-
-/*
-    ==========================================
-    CRÉDITO DEL DESARROLLO
-    ==========================================
-
-    Tiene poco peso visual porque es información
-    secundaria respecto a k’ak’b’e.lab.
-*/
+.footer-copyright,
 .footer-credit {
-    color: rgba(255, 255, 255, 0.45);
+    margin: 0;
 
-    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.65);
 
-    margin-bottom: 0;
+    font-size: 0.75rem;
 }
 
 
-/*
-    Tu nombre funciona como enlace hacia
-    tu portafolio.
-*/
 .footer-credit a {
-    color: rgba(255, 255, 255, 0.72);
+    color: var(--kakbe-white);
+
+    font-weight: 600;
 
     text-decoration: none;
-
-    transition: color 0.3s ease;
 }
 
 
@@ -282,38 +183,63 @@
 }
 
 
-/*
-    ==========================================
-    RESPONSIVE: CELULARES
-    ==========================================
-*/
-@media (max-width: 767px) {
+/* ==========================================
+   TABLET
+   ========================================== */
 
-    /*
-        Reducimos ligeramente el espacio.
-    */
-    .footer {
-        padding: 3rem 0 1.5rem;
+@media (max-width: 991px) {
+
+    .footer-main {
+        flex-wrap: wrap;
     }
 
 
-    /*
-        Los enlaces quedan alineados a la izquierda
-        y pueden distribuirse en varias líneas.
-    */
+    .footer-navigation {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: flex-start;
+
+        flex-wrap: wrap;
+
+        gap: 0.8rem 1.3rem;
+    }
+
+}
+
+
+/* ==========================================
+   CELULAR
+   ========================================== */
+
+@media (max-width: 767px) {
+
+    .footer-main {
+        gap: 1rem;
+    }
+
+
+    .footer-logo {
+        width: 44px;
+    }
+
+
     .footer-navigation {
         gap: 0.7rem 1rem;
     }
 
 
-    /*
-        En móvil copyright y crédito quedan
-        uno debajo del otro.
-    */
+    .footer-navigation a {
+        font-size: 0.78rem;
+    }
+
+
     .footer-bottom {
         flex-direction: column;
-
         align-items: flex-start;
+
+        gap: 0.5rem;
     }
 
 }

@@ -1,228 +1,88 @@
 <!--
     ==========================================
-    SECCIÓN: SOBRE NOSOTRAS
+    PRESENTACIÓN DE LA COMUNIDAD
     ==========================================
 
-    Esta sección explica qué tipo de comunidad
-    queremos construir.
+    Utilizamos una fila de Bootstrap para crear
+    dos columnas:
 
-    El Hero ya presenta la marca y explica
-    rápidamente qué es k’ak’b’e.lab.
+    IZQUIERDA:
+    fotografía real de la comunidad.
 
-    Por eso aquí no repetimos el logo ni
-    información visual innecesaria.
+    DERECHA:
+    historia y presentación de k’ak’b’e.lab.
 
-    id="nosotras":
-    permite que el Navbar pueda llevar al usuario
-    directamente hasta esta sección utilizando:
+    align-items-center:
+    centra verticalmente ambas columnas.
 
-    href="#nosotras"
+    g-5:
+    agrega espacio entre la fotografía y el texto.
 -->
-<section class="about" id="nosotras">
+<div class="row align-items-center g-5 about-intro">
+
 
     <!--
-        container:
-        clase de Bootstrap que mantiene el contenido
-        centrado y evita que quede pegado a los
-        extremos de la pantalla.
+        ======================================
+        FOTOGRAFÍA
+        ======================================
+
+        col-lg-6:
+        en pantallas grandes ocupa la mitad
+        de la fila.
+
+        En celulares Bootstrap colocará esta
+        columna arriba del texto.
     -->
-    <div class="container">
+    <div class="col-lg-6">
+
+        <div class="about-photo-container">
+
+            <img
+                src="assets/equipo/Teams.JPG"
+                alt="Integrantes de k'ak'b'e.lab participando juntas en una actividad"
+                class="about-photo"
+            >
+
+        </div>
+
+    </div>
 
 
-        <!--
-            ==========================================
-            INTRODUCCIÓN
-            ==========================================
+    <!--
+        ======================================
+        HISTORIA
+        ======================================
 
-            about-intro:
-            clase propia que utilizamos para controlar
-            el ancho de este bloque desde CSS.
+        En escritorio ocupa la otra mitad.
+    -->
+    <div class="col-lg-6">
 
-            text-center:
-            clase de Bootstrap que centra el texto.
-
-            mx-auto:
-            coloca automáticamente espacio a izquierda
-            y derecha para mantener el bloque centrado.
-        -->
-        <div class="about-intro text-center mx-auto">
+        <div class="about-content">
 
 
-            <!--
-                Pequeña etiqueta que identifica
-                de qué trata esta sección.
-            -->
             <span class="about-label">
                 NUESTRA COMUNIDAD
             </span>
 
 
-            <!--
-                Título principal de la sección.
-
-                El <span> nos permite darle un color
-                diferente solamente a:
-
-                "queremos crecer juntas."
-            -->
             <h2 class="about-title">
-
                 Más que aprender tecnología,
                 <span>queremos crecer juntas.</span>
-
             </h2>
 
 
-            <!--
-                Descripción breve de la comunidad.
-
-                Evitamos hacer este texto demasiado largo
-                porque posteriormente tenemos una sección
-                completa dedicada al propósito.
-            -->
             <p class="about-description">
-
-                k’ak’b’e.lab nace como una comunidad de estudiantes
-                de la Universidad del Valle de Guatemala que busca
-                acercar la tecnología a niñas y jóvenes mediante
-                espacios donde puedan aprender, experimentar y crear.
-
+                k’ak’b’e.lab nace de estudiantes de la
+                Universidad del Valle de Guatemala que
+                compartimos el interés por la tecnología
+                y una misma inquietud: crear un espacio
+                donde podamos aprender, acompañarnos y
+                abrir oportunidades para más niñas y jóvenes.
             </p>
-
-        </div>
-
-
-        <!--
-            ==========================================
-            PILARES DE LA COMUNIDAD
-            ==========================================
-
-            row:
-            crea una fila utilizando el Grid de Bootstrap.
-
-            g-4:
-            agrega separación entre las columnas.
-
-            mt-3:
-            agrega una separación moderada entre
-            la introducción y los pilares.
-
-            text-center:
-            centra el contenido de cada pilar.
-
-            about-pillars:
-            clase propia que limita el ancho total
-            del grupo.
-
-            Esto evita que en monitores grandes los
-            tres pilares queden demasiado alejados.
-        -->
-        <div class="row g-4 mt-3 text-center about-pillars">
-
-
-            <!--
-                ======================================
-                PILAR 1: TECNOLOGÍA
-                ======================================
-
-                col-md-4:
-                desde pantallas medianas este elemento
-                ocupa 4 de las 12 columnas de Bootstrap.
-
-                Como tenemos:
-
-                4 + 4 + 4 = 12
-
-                los tres pilares caben en una sola fila.
-            -->
-            <div class="col-md-4">
-
-                <div class="about-pillar">
-
-                    <!--
-                        Pequeño símbolo relacionado
-                        con programación y tecnología.
-                    -->
-                    <div class="pillar-symbol">
-                        &lt;/&gt;
-                    </div>
-
-
-                    <h3>
-                        Tecnología
-                    </h3>
-
-
-                    <p>
-                        Aprendemos creando, experimentando
-                        y compartiendo conocimiento.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!--
-                ======================================
-                PILAR 2: COMUNIDAD
-                ======================================
-            -->
-            <div class="col-md-4">
-
-                <div class="about-pillar">
-
-                    <div class="pillar-symbol">
-                        ◇
-                    </div>
-
-
-                    <h3>
-                        Comunidad
-                    </h3>
-
-
-                    <p>
-                        Creamos espacios donde podamos
-                        aprender y crecer acompañadas.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!--
-                ======================================
-                PILAR 3: OPORTUNIDADES
-                ======================================
-            -->
-            <div class="col-md-4">
-
-                <div class="about-pillar">
-
-                    <div class="pillar-symbol">
-                        ♡
-                    </div>
-
-
-                    <h3>
-                        Oportunidades
-                    </h3>
-
-
-                    <p>
-                        Compartimos herramientas y oportunidades
-                        que puedan abrir nuevos caminos.
-                    </p>
-
-                </div>
-
-            </div>
 
 
         </div>
 
     </div>
 
-</section>
+</div>
