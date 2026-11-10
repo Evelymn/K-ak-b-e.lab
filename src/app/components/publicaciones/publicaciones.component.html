@@ -1,0 +1,97 @@
+
+<section class="publicaciones-section">
+
+  <div class="container">
+
+
+
+    <!-- Encabezado editorial -->
+    <header class="publicaciones-header">
+      <span class="eyebrow">VOCES DE NUESTRA COMUNIDAD</span>
+
+      <h1>Ideas que <span>abren caminos.</span></h1>
+
+      <p>
+        Un espacio para compartir experiencias,
+        aprendizajes y nuevas perspectivas sobre tecnología.
+      </p>
+    </header>
+
+    <!-- Estados de carga -->
+    <p *ngIf="cargando" role="status">
+      Cargando publicaciones...
+    </p>
+
+    <p *ngIf="error" class="text-danger" role="alert">
+      {{ error }}
+    </p>
+
+    <p *ngIf="!cargando && !error && !destacada">
+      Todavía no hay publicaciones disponibles.
+    </p>
+
+    <!-- Publicación destacada -->
+    <article
+      *ngIf="!cargando && !error && destacada as publicacion"
+      class="publicacion-destacada"
+    >
+      <div class="destacada-contenido">
+
+        <span class="destacada-etiqueta">
+          PUBLICACIÓN DESTACADA · {{ publicacion.categoria }}
+        </span>
+
+        <h2>{{ publicacion.titulo }}</h2>
+
+        <p>{{ publicacion.contenido }}</p>
+
+        <div class="destacada-footer">
+          <span>
+            {{ publicacion.autora }} ·
+            {{ publicacion.fecha_creacion | date:'dd/MM/yyyy' }}
+          </span>
+        </div>
+
+      </div>
+
+      <div class="destacada-decoracion" aria-hidden="true">
+        <span>k’ak’b’e.lab</span>
+      </div>
+    </article>
+
+    <!-- Otras publicaciones -->
+    <div
+      *ngIf="!cargando && !error && otrasPublicaciones.length > 0"
+      class="otras-publicaciones"
+    >
+      <h2>Explora más ideas</h2>
+
+      <div class="row g-4">
+        <div
+          class="col-md-6 col-lg-4"
+          *ngFor="let publicacion of otrasPublicaciones"
+        >
+          <article class="card h-100">
+            <div class="card-body">
+
+              <span class="badge text-bg-secondary">
+                {{ publicacion.categoria }}
+              </span>
+
+              <h3>{{ publicacion.titulo }}</h3>
+
+              <p>{{ publicacion.contenido }}</p>
+
+              <small>
+                {{ publicacion.autora }} ·
+                {{ publicacion.fecha_creacion | date:'dd/MM/yyyy' }}
+              </small>
+
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
