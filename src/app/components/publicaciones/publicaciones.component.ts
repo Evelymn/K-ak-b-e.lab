@@ -11,7 +11,7 @@ import {
 @Component({
   selector: 'app-publicaciones',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink  ],
   templateUrl: './publicaciones.component.html',
   styleUrl: './publicaciones.component.css'
 })
