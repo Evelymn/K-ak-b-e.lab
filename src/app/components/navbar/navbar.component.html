@@ -152,16 +152,46 @@
                               Nuestro equipo
                           </a>
                       </li>
-                       <li class="nav-item">
 
-                            <a
-                                class="nav-link"
-                                href="#experiencias"
-                            >
+                        <!-- Menú desplegable: Explora -->
+                        <li class="nav-item dropdown">
+
+                          <button
+                            class="nav-link dropdown-toggle"
+                            type="button"
+                            id="exploraDropdown"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                            Explora
+                          </button>
+
+                          <ul
+                            class="dropdown-menu dropdown-menu-end"
+                            aria-labelledby="exploraDropdown"
+                          >
+
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                routerLink="/publicaciones"
+                              >
+                                Publicaciones
+                              </a>
+                            </li>
+
+                            <li>
+                              <a
+                                class="dropdown-item"
+                                routerLink="/experiencias"
+                              >
                                 Experiencias
-                            </a>
+                              </a>
+                            </li>
 
+                          </ul>
                         </li>
+
                        <li class="nav-item">
                           <a class="nav-link" href="#colabora">
                               Colabora con nosotras
