@@ -62,3 +62,5 @@ __pycache__/
 
 # Bases de datos SQLite locales
 *.sqlite3
+# Fotografías subidas durante el desarrollo
+/backend/media/
