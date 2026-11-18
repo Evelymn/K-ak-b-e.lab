@@ -1,128 +1,165 @@
-<!--
-    ==========================================
-    SECCIÓN: EXPERIENCIAS
-    ==========================================
 
-    Esta sección muestra experiencias reales
-    de k’ak’b’e.lab.
-
-    Su objetivo es demostrar que la comunidad
-    no solamente tiene un propósito, sino que
-    también participa, aprende y construye.
-
-    id="experiencias":
-    permite acceder desde el Navbar mediante:
-
-    href="#experiencias"
--->
 <section class="experiences" id="experiencias">
+  <div class="container">
 
-    <div class="container">
+    <!-- Encabezado -->
+    <header class="experiences-intro">
+      <span class="experiences-label">
+        NUESTRAS EXPERIENCIAS
+      </span>
 
+      <h1 class="experiences-title">
+        Nuestro camino también
+        <span>se construye haciendo.</span>
+      </h1>
 
-        <!--
-            ==========================================
-            ENCABEZADO
-            ==========================================
-        -->
-        <div class="experiences-intro">
-<h1 class="experiences-title">
-    Nuestro camino también
-    <span>se construye haciendo.</span>
-</h1>
+      <p class="experiences-description">
+        Cada experiencia nos permite aprender,
+        trabajar juntas y seguir construyendo
+        la comunidad que queremos crear.
+      </p>
+    </header>
 
-            <p class="experiences-description">
-                Cada experiencia nos permite aprender,
-                trabajar juntas y seguir construyendo
-                la comunidad que queremos crear.
-            </p>
+    <!-- Cargando -->
+    <p *ngIf="cargando" role="status">
+      Cargando experiencias...
+    </p>
 
-        </div>
+    <!-- Error -->
+    <p *ngIf="error" class="text-danger" role="alert">
+      {{ error }}
+    </p>
 
+    <!-- Sin experiencias -->
+    <p *ngIf="!cargando && !error && experiencias.length === 0">
+      Todavía no hay experiencias publicadas.
+    </p>
 
-        <!--
-            ==========================================
-            PRIMERA EXPERIENCIA
-            ==========================================
+    <!-- Experiencias dinámicas -->
+    <div
+      class="row align-items-center g-5 experience-feature"
+      *ngFor="let experiencia of experiencias"
+    >
 
-            Utilizamos dos columnas:
+      <!-- Carrusel de fotografías -->
+      <div class="col-lg-7">
 
-            IZQUIERDA:
-            fotografía real.
+        <div
+          *ngIf="experiencia.fotografias.length > 0"
+          class="experience-carousel carousel slide"
+          [id]="'carousel-' + experiencia.id"
+          data-bs-interval="false"
+          data-bs-touch="true"
+        >
 
-            DERECHA:
-            información de la experiencia.
+          <div class="carousel-inner">
 
-            align-items-center:
-            centra verticalmente ambas columnas.
+            <div
+              class="carousel-item"
+              *ngFor="
+                let foto of experiencia.fotografias;
+                let i = index
+              "
+              [class.active]="i === 0"
+            >
+              <img
+                [src]="foto.imagen"
+                [alt]="foto.texto_alternativo"
+                class="experience-photo"
+                loading="lazy"
+              >
+            </div>
 
-            g-5:
-            agrega separación entre fotografía y texto.
-        -->
-        <div class="row align-items-center g-5 experience-feature">
+          </div>
 
+          <!-- Controles -->
+          <ng-container *ngIf="experiencia.fotografias.length > 1">
 
-            <!-- FOTOGRAFÍA -->
-            <div class="col-lg-7">
+            <button
+              class="carousel-control-prev"
+              type="button"
+              [attr.data-bs-target]="'#carousel-' + experiencia.id"
+              data-bs-slide="prev"
+              aria-label="Fotografía anterior"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+            </button>
 
-                <div class="experience-photo-container">
+            <button
+              class="carousel-control-next"
+              type="button"
+              [attr.data-bs-target]="'#carousel-' + experiencia.id"
+              data-bs-slide="next"
+              aria-label="Fotografía siguiente"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+            </button>
 
-                    <img
-                        src="assets/equipo/Teams.JPG"
-                        alt="Integrantes de k'ak'b'e.lab durante su participación en el Hackathon Nacional 2026"
-                        class="experience-photo"
-                    >
+            <!-- Indicadores -->
+            <div class="carousel-indicators">
 
-                </div>
+              <button
+                *ngFor="
+                  let foto of experiencia.fotografias;
+                  let i = index
+                "
+                type="button"
+                [attr.data-bs-target]="'#carousel-' + experiencia.id"
+                [attr.data-bs-slide-to]="i"
+                [class.active]="i === 0"
+                [attr.aria-current]="i === 0 ? 'true' : null"
+                [attr.aria-label]="'Fotografía ' + (i + 1)"
+              ></button>
 
             </div>
 
-
-            <!-- INFORMACIÓN -->
-            <div class="col-lg-5">
-
-                <article class="experience-content">
-
-
-                    <!--
-                        Etiqueta que permite identificar
-                        rápidamente el tipo de experiencia.
-                    -->
-                    <span class="experience-category">
-                        EXPERIENCIA
-                    </span>
-
-
-                    <h3 class="experience-name">
-                        Hackathon Nacional 2026
-                    </h3>
-
-
-                    <p class="experience-subtitle">
-                        Conectando el Estado con la Ciudadanía
-                    </p>
-
-
-                    <p class="experience-date">
-                        Septiembre · 2026
-                    </p>
-
-
-                    <p class="experience-text">
-                        k’ak’b’e.lab participó como equipo en el
-                        Hackathon Nacional 2026, una experiencia
-                        que nos permitió poner en práctica nuestras
-                        habilidades, colaborar y seguir creciendo
-                        juntas en tecnología.
-                    </p>
-
-
-                </article>
-
-            </div>
+          </ng-container>
 
         </div>
+
+        <div
+          *ngIf="experiencia.fotografias.length === 0"
+          class="experience-photo-container"
+        >
+          <p class="p-4">
+            Sin fotografías disponibles.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Información de la experiencia -->
+      <div class="col-lg-5">
+
+        <article class="experience-content">
+
+          <span class="experience-category">
+            {{ experiencia.categoria }}
+          </span>
+
+          <h2 class="experience-name">
+            {{ experiencia.titulo }}
+          </h2>
+
+          <p class="experience-date" *ngIf="experiencia.fecha">
+            {{ experiencia.fecha | date:'MMMM yyyy':'':'es' }}
+          </p>
+
+          <p class="experience-text">
+            {{ experiencia.descripcion }}
+          </p>
+
+        </article>
+
+      </div>
 
     </div>
 
+  </div>
 </section>

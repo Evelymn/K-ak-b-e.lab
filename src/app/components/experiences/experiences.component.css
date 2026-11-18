@@ -11,8 +11,7 @@
 */
 .experiences {
     background-color: var(--kakbe-mint);
-
-    padding: 5rem 0;
+    padding: 3.5rem 0;
 }
 
 
@@ -26,9 +25,8 @@
     sección de Purpose y Team.
 */
 .experiences-intro {
-    max-width: 760px;
-
-    margin-bottom: 3rem;
+    max-width: 850px;
+    margin-bottom: 2rem;
 }
 
 
@@ -265,4 +263,92 @@
         aspect-ratio: 4 / 3;
     }
 
+}
+
+/* ==========================================
+   CARRUSEL DE EXPERIENCIAS
+   ========================================== */
+
+.experience-carousel {
+    position: relative;
+    width: 100%;
+}
+
+.experience-carousel .carousel-inner {
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.experience-carousel .carousel-item {
+    aspect-ratio: 16 / 10;
+}
+
+.experience-carousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Controles del carrusel */
+
+.experience-carousel .carousel-control-prev,
+.experience-carousel .carousel-control-next {
+    width: 12%;
+    opacity: 0.9;
+}
+
+.experience-carousel .carousel-control-prev-icon,
+.experience-carousel .carousel-control-next-icon {
+    background-color: rgba(41, 75, 82, 0.65);
+    border-radius: 50%;
+    padding: 18px;
+    background-size: 55%;
+}
+
+/* Indicadores inferiores */
+
+.experience-carousel .carousel-indicators {
+    margin-bottom: 1rem;
+}
+
+.experience-carousel .carousel-indicators button {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    border: 0;
+}
+
+/* Separación entre experiencias */
+
+.experience-feature + .experience-feature {
+    margin-top: 5rem;
+}
+
+/* Tablets */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .experience-carousel .carousel-item {
+        aspect-ratio: 16 / 9;
+    }
+}
+
+/* Celulares */
+
+@media (max-width: 767px) {
+    .experience-carousel .carousel-item {
+        aspect-ratio: 4 / 3;
+    }
+
+    .experience-feature + .experience-feature {
+        margin-top: 3.5rem;
+    }
+}
+
+/* Accesibilidad: reducir movimiento */
+
+@media (prefers-reduced-motion: reduce) {
+    .experience-carousel .carousel-item {
+        transition: none;
+    }
 }

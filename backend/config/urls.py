@@ -19,6 +19,11 @@ urlpatterns = [
 
     # API REST de publicaciones.
     path('api/publicaciones/', include('publications.urls')),
+     # API pública de experiencias.
+    path(
+        'api/experiencias/',
+        include('experiences.urls')
+    )
 ]
 
 

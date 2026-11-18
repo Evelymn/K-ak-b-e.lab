@@ -1,4 +1,8 @@
+import io
+import tempfile
 
+from PIL import Image
+from django.test import override_settings
 from django.test import TestCase
 from django.core.exceptions import ValidationError
 from django.contrib.auth import get_user_model
@@ -12,6 +16,32 @@ from .models import (
 
 
 class FotoExperienciaTests(TestCase):
+
+    @classmethod
+    def setUpClass(cls):
+        cls.directorio_temporal = tempfile.TemporaryDirectory()
+
+        cls.media_override = override_settings(
+            MEDIA_ROOT=cls.directorio_temporal.name
+        )
+
+        cls.media_override.enable()
+
+        try:
+            super().setUpClass()
+        except Exception:
+            cls.media_override.disable()
+            cls.directorio_temporal.cleanup()
+            raise
+
+    @classmethod
+    def tearDownClass(cls):
+        try:
+            super().tearDownClass()
+        finally:
+            cls.media_override.disable()
+            cls.directorio_temporal.cleanup()
+
 
     @classmethod
     def setUpTestData(cls):
@@ -35,17 +65,30 @@ class FotoExperienciaTests(TestCase):
             responsable=cls.usuario
         )
 
+
     def crear_foto(self, orden):
+        # Crear una imagen válida en memoria.
+        imagen = Image.new(
+            "RGB",
+            (100, 100),
+            color="white"
+        )
+
+        archivo = io.BytesIO()
+        imagen.save(archivo, format="JPEG")
+        archivo.seek(0)
+
         return FotoExperiencia.objects.create(
             experiencia=self.experiencia,
             imagen=SimpleUploadedFile(
                 f"foto_{orden}.jpg",
-                b"contenido-de-prueba",
+                archivo.getvalue(),
                 content_type="image/jpeg"
             ),
             texto_alternativo=f"Fotografía {orden}",
             orden=orden
         )
+
 
     def test_permite_cuatro_fotografias(self):
         for numero in range(1, 5):
